@@ -35,11 +35,11 @@ class account_model extends CI_Model
         else
             return  $id;
     }
-        public function viewmylist($file,$name)
+      public function viewmylist($file,$name)
     {
         $data=array(
-            "fullname" =>$file,
-            "emailaddresss" => $name
+            "name" =>$name,
+            "filename" =>$file
         );
         $query=$this->db->insert("list", $data );
         $id=$this->db->insert_id();
@@ -48,5 +48,11 @@ class account_model extends CI_Model
         else
             return  $id;
     }
+      public function viewalllist()
+    {
+   
+        $query=$this->db->get("list")->result();
+        return $query;
+    } 
 }
 ?>

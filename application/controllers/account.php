@@ -142,6 +142,7 @@ public function team()
 	{
 		$access = array("1","2","3");
 		$this->checkaccess($access);
+            $data['list']=$this->account_model->viewalllist();
             $data[ 'page' ] = 'viewmylist';
            $data['title']='view my list';
             $this->load->view('template',$data);
@@ -156,10 +157,7 @@ public function team()
    }
     function viewmylistuploadsubmit()
 	{
-       
-         
-       
-       	$access = array("1","2","3");
+      	$access = array("1","2","3");
 		$this->checkaccess($access);
  $config['upload_path'] = './uploads/';
         $config['allowed_types'] = '*';
@@ -173,8 +171,8 @@ public function team()
             $filepath=$uploaddata['file_path'];
         }
         $fullfilepath=$filepath."".$file;
-       $name=$this->input->post('name');
-//        echo "filename is".$file;
+       $name=$this->input->get_post('name');
+        echo "filename is".$name;
       
         ////       $file = $this->csvreader->parse_file($fullfilepath);
         $id1=$this->account_model->viewmylist($file,$name);
@@ -186,5 +184,7 @@ public function team()
            $data[ 'page' ] = 'viewmylist';
 		 $this->load->view('template',$data);
     }
+     
+    
 }
 ?>
