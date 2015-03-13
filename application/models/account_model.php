@@ -19,6 +19,17 @@ class account_model extends CI_Model
             return  $id;
     
     }
+        public function mailchip($id)
+    {
+       $userid=$this->session->userdata("id");
+        $query=$this->db->query("UPDATE `user` SET `mailchipid`='$id' WHERE `id`='$userid'");
+        
+        if(!$query)
+            return  0;
+        else
+            return  1;
+    
+    }
        
      public function account($fullname,$emailaddresss,$choosepassword,$reenterpassword)
     {

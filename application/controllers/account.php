@@ -164,6 +164,22 @@ public function team()
            $data['title']='view my list';
             $this->load->view('template',$data);
    }
+           public function mailchipid()
+	{
+		$access = array("1","2","3");
+		$this->checkaccess($access);
+            $data[ 'page' ] = 'mailchipid';
+             $data['title']='view my list';
+            $this->load->view('template',$data);
+   }
+            public function mailchipidsubmit()
+	{
+		$access = array("1","2","3");
+		$this->checkaccess($access);
+          $id=$this->input->get_post('id');
+        $this->account_model->mailchip($id);
+      redirect('account/mailchipid', 'refresh');    
+   }
     function viewmylistuploadsubmit()
 	{
       	$access = array("1","2","3");

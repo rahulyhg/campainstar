@@ -27,8 +27,8 @@
                     <tr>
                         <td><?php echo $listrow ->name;?></td>
                         <td><?php echo $listrow ->timestamp;?></td>
-                         <td>
-                          <?php echo $listrow ->filename?></td>
+                         <td>   <a class="btn btn-default" target="_blank"  href="<?php echo base_url('uploads/')."/".$listrow->filename  ?>"><i class="icon-upload"></i>Download</a> 
+<!--                          <?php echo $listrow ->filename?></td>-->
                          
                         <td>
                             <a class="label label-table label-success" href="<?php echo site_url('account/deletelist?id=').$listrow ->id ?>"> Delete   </a>
