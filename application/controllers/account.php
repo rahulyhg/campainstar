@@ -134,9 +134,18 @@ public function team()
 	{
 		$access = array("1","2","3");
 		$this->checkaccess($access);
-            $data[ 'page' ] = 'campangnedit';
-           $data['title']='campangnedit';
+         $data[ 'page' ] = 'campangnedit';
+         $data['title']='campangnedit';
             $this->load->view('template',$data);
+   }
+    public function deletelist()
+	{
+		$access = array("1","2","3");
+		$this->checkaccess($access);
+//        echo "id is". $this->input->get('id');
+        $this->account_model->deletelist($this->input->get('id'));
+ redirect('account/viewmylist', 'refresh');
+        
    }
         public function viewmylist()
 	{
@@ -173,16 +182,14 @@ public function team()
         $fullfilepath=$filepath."".$file;
        $name=$this->input->get_post('name');
         echo "filename is".$name;
-      
-        ////       $file = $this->csvreader->parse_file($fullfilepath);
+      ////$file = $this->csvreader->parse_file($fullfilepath);
         $id1=$this->account_model->viewmylist($file,$name);
 //        echo $id1;
         if($id1==0)
         $data['alerterror']="New Users could not be Uploaded.";
 		else
 		$data['alertsuccess']="Users Uploaded Successfully.";
-           $data[ 'page' ] = 'viewmylist';
-		 $this->load->view('template',$data);
+redirect('account/viewmylist', 'refresh');
     }
      
     

@@ -22,16 +22,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                <?php print_r($list);?>
+              
+                   <?php foreach($list as $listrow) {?>
                     <tr>
-                        <td>Isidra</td>
-                        <td>Boudreaux</td>
-                        <td>Traffic Court Referee</td>
-                        <td></td>
-                        <td><span class="label label-table label-success">Active</span>
+                        <td><?php echo $listrow ->name;?></td>
+                        <td><?php echo $listrow ->timestamp;?></td>
+                         <td>
+                          <?php echo $listrow ->filename?></td>
+                         
+                        <td>
+                            <a class="label label-table label-success" href="<?php echo site_url('account/deletelist?id=').$listrow ->id ?>"> Delete   </a>
+                        </td>
                         </td>
                     </tr>
-             
+             <?php }?>
                 </tbody>
             </table>
         </div>

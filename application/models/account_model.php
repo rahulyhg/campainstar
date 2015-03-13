@@ -54,5 +54,10 @@ class account_model extends CI_Model
         $query=$this->db->get("list")->result();
         return $query;
     } 
+      public function deletelist($id)
+    {
+     $this->db->query("DELETE FROM `list` WHERE `id`='$id'");
+        return $query;
+    } 
 }
 ?>
