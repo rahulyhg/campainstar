@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 13, 2015 at 11:53 AM
+-- Generation Time: Mar 13, 2015 at 02:57 PM
 -- Server version: 5.5.36
 -- PHP Version: 5.4.27
 
@@ -367,6 +367,29 @@ INSERT INTO `company` (`campanyname`, `campanyurl`, `logo`, `selectindustry`, `i
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `list`
+--
+
+CREATE TABLE IF NOT EXISTS `list` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `filename` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `list`
+--
+
+INSERT INTO `list` (`id`, `name`, `timestamp`, `filename`) VALUES
+(2, 'book', '2015-03-13 12:42:17', 'Book15.xlsx'),
+(3, 'excel', '2015-03-13 12:51:08', 'Book16.xlsx'),
+(4, 'Demo', '2015-03-13 13:48:00', 'Book17.xlsx');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `logintype`
 --
 
@@ -545,6 +568,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `socialid` varchar(255) NOT NULL,
   `logintype` int(11) NOT NULL,
   `json` text NOT NULL,
+  `mailchipid` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
@@ -552,15 +576,15 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `password`, `email`, `accesslevel`, `timestamp`, `status`, `image`, `username`, `socialid`, `logintype`, `json`) VALUES
-(1, 'wohlig', 'a63526467438df9566c508027d9cb06b', 'wohlig@wohlig.com', 1, '0000-00-00 00:00:00', 1, NULL, '', '', 0, ''),
-(4, 'pratik', '0cb2b62754dfd12b6ed0161d4b447df7', 'pratik@wohlig.com', 1, '2014-05-12 06:52:44', 1, NULL, 'pratik', '1', 1, ''),
-(5, 'wohlig123', 'wohlig123', 'wohlig1@wohlig.com', 1, '2014-05-12 06:52:44', 1, NULL, '', '', 0, ''),
-(6, 'wohlig1', 'a63526467438df9566c508027d9cb06b', 'wohlig2@wohlig.com', 1, '2014-05-12 06:52:44', 1, NULL, '', '', 0, ''),
-(7, 'A', '7b0a80efe0d324e937bbfc7716fb15d3', 'avinash@wohlig.com', 1, '2014-10-17 06:22:29', 1, NULL, '', '', 1, ''),
-(9, 'avi', 'a208e5837519309129fa466b0c68396b', 'a@email.com', 2, '2014-12-03 11:06:19', 3, '', '', '123', 1, 'demojson'),
-(13, 'aaa', 'a208e5837519309129fa466b0c68396b', 'aaa3@email.com', 3, '2014-12-04 06:55:42', 3, NULL, '', '1', 2, 'userjson'),
-(14, 'Avinash', '91ec1f9324753048c0096d036a694f86', 'customer@wohlig.com', 3, '2015-03-07 09:02:04', 1, 'event48830.jpg', '', '1', 1, 'demojson');
+INSERT INTO `user` (`id`, `name`, `password`, `email`, `accesslevel`, `timestamp`, `status`, `image`, `username`, `socialid`, `logintype`, `json`, `mailchipid`) VALUES
+(1, 'wohlig', 'a63526467438df9566c508027d9cb06b', 'wohlig@wohlig.com', 1, '0000-00-00 00:00:00', 1, NULL, '', '', 0, '', '989'),
+(4, 'pratik', '0cb2b62754dfd12b6ed0161d4b447df7', 'pratik@wohlig.com', 1, '2014-05-12 06:52:44', 1, NULL, 'pratik', '1', 1, '', '87917918'),
+(5, 'wohlig123', 'wohlig123', 'wohlig1@wohlig.com', 1, '2014-05-12 06:52:44', 1, NULL, '', '', 0, '', '87917918'),
+(6, 'wohlig1', 'a63526467438df9566c508027d9cb06b', 'wohlig2@wohlig.com', 1, '2014-05-12 06:52:44', 1, NULL, '', '', 0, '', '87917918'),
+(7, 'A', '7b0a80efe0d324e937bbfc7716fb15d3', 'avinash@wohlig.com', 1, '2014-10-17 06:22:29', 1, NULL, '', '', 1, '', '87917918'),
+(9, 'avi', 'a208e5837519309129fa466b0c68396b', 'a@email.com', 2, '2014-12-03 11:06:19', 3, '', '', '123', 1, 'demojson', '87917918'),
+(13, 'aaa', 'a208e5837519309129fa466b0c68396b', 'aaa3@email.com', 3, '2014-12-04 06:55:42', 3, NULL, '', '1', 2, 'userjson', '87917918'),
+(14, 'Avinash', '91ec1f9324753048c0096d036a694f86', 'customer@wohlig.com', 3, '2015-03-07 09:02:04', 1, 'event48830.jpg', '', '1', 1, 'demojson', '87917918');
 
 -- --------------------------------------------------------
 
