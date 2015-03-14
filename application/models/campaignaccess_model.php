@@ -74,9 +74,10 @@ class campaignaccess_model extends CI_Model
         $query=$this->db->get("campaign_campaign")->row();
         return $query;
     }
+    
     function getcampaignbyuser($id)
     {
-        $query=$this->db->query("SELECT * FROM `campaign_campaign` LEFT OUTER JOIN `campaign_campaignresult` ON `campaign_campaign`.`id`=`campaign_campaignresult`.`campaign` WHERE `user`='$id'")->result();
+        $query=$this->db->query("SELECT `campaign_campaign`.`id` as `campaignid`,`campaign_campaign`.`Name`,`campaign_campaign`.`startdate`,`campaign_campaignresult`.* FROM `campaign_campaign` LEFT OUTER JOIN `campaign_campaignresult` ON `campaign_campaign`.`id`=`campaign_campaignresult`.`campaign` WHERE `user`='$id'")->result();
         return $query;
     }
     public function edit($id,$Name,$emailused,$question,$deadline,$goals,$audience,$callactivate,$reqelem,$keywords,$specific,$outline,$avoid,$material,$instructions,$uorganization,$industryp,$propositions,$propositions1,$propositions2,$itrends,$mcompetitors,$branding,$specificfile,$outlinefile,$materialfile,$brandingfile,$user)
@@ -132,18 +133,18 @@ LEFT OUTER JOIN `user` as`tab2` ON `tab2`.`id`=`campaign_group`.`contentwriter`"
     }
     function getallgroupbycampaign($id)
     {
-        $query=$this->db->query("SELECT `campaign_group`.`name` as `name` ,`campaign_group`.`id` as `id` FROM `campaign_group`")->result();
+        $query=$this->db->query("SELECT `campaign_group`.`name` as `name` ,`campaign_group`.`id` as `id` ")->result();
         return $query;
     }
     
     function getselectedcampaigngroupbycampaign($id)
     {
-//        $query=$this->db->query("SELECT `campaign_campaigngroup`.`id`, `campaign_campaigngroup`.`campaign`, `campaign_campaigngroup`.`Timestamp`,`campaign_campaigngroup`. `order`, `campaign_campaigngroup`.`status`, `campaign_campaigngroup`.`group`,`campaign_group`.`name` as `groupname` 
-//FROM `campaign_campaigngroup` 
-//LEFT OUTER JOIN `campaign_group` ON `campaign_campaigngroup`.`group`=`campaign_group`.`id`
-//LEFT OUTER JOIN `campaigngroupstatus` ON `campaign_campaigngroup`.`status`=`campaigngroupstatus`.`id`
-//WHERE `campaign_campaigngroup`.`campaign`='$id' AND `campaign_campaigngroup`.`status`=1 LIMIT 0,2")->result();
-//        return $query;
+        $query=$this->db->query("SELECT `campaign_campaigngroup`.`id`, `campaign_campaigngroup`.`campaign`, `campaign_campaigngroup`.`Timestamp`,`campaign_campaigngroup`. `order`, `campaign_campaigngroup`.`status`, `campaign_campaigngroup`.`group`,`campaign_group`.`name` as `groupname` 
+FROM `campaign_campaigngroup` 
+LEFT OUTER JOIN `campaign_group` ON `campaign_campaigngroup`.`group`=`campaign_group`.`id`
+LEFT OUTER JOIN `campaigngroupstatus` ON `campaign_campaigngroup`.`status`=`campaigngroupstatus`.`id`
+WHERE `campaign_campaigngroup`.`campaign`='$id' AND `campaign_campaigngroup`.`status`=1 LIMIT 0,2")->result();
+        return $query;
     }
     
     function getcampaigntestreportbycampaign($id)
@@ -179,7 +180,7 @@ WHERE `campaign_campaignresult`. `campaign`='$id'")->row();
         $querycheck=$this->db->query("SELECT * FROM `campaign_campaigngroup` WHERE `campaign`='$campaign' AND `status`=1")->result();
         $length=sizeof($querycheck);
 //        echo $length;
-        if($length==2)
+        if($length >= 2)
         {
             return 0;
         }
@@ -191,7 +192,7 @@ WHERE `campaign_campaignresult`. `campaign`='$id'")->row();
             $this->db->where('id',$id);
             $query=$this->db->update( 'campaign_campaigngroup', $data );
             
-            $querycheck=$this->db->query("SELECT * FROM `campaign_campaigngroup` WHERE `campaign`='$campaign' AND `status`=1")->result();
+            $querycheck=$this->db->query("INSERT INTO `wohligco_campaign`.`campaign_campaigngroup` (`id`, `campaign`, `Timestamp`, `order`, `status`, `group`, `image`, `htmldata`) VALUES (NULL, '$campaign', CURRENT_TIMESTAMP, '', '1', '$id', '', '');");
             $length=sizeof($querycheck);
     //        echo $length;
             if($length==2)

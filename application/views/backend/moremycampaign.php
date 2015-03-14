@@ -21,9 +21,9 @@
                 <div class="panel-body">
 
               <div class="content1">
-                  <span class="bold">Campaign created on:</span> 1-Mar-2015 <br>
-                  <span class="bold">Team A:</span> Select Your Team <br>
-                  <span class="bold">Team B:</span> Jim &amp; Jack
+                  <span class="bold">Campaign created on:</span><?php  echo $campaign->startdate;?> <br>
+                  <span class="bold">Team A:</span> <?php if($groups[0]) { echo $groups[0]->groupname; } else {echo "Team will be Assigned";} ?> <br>
+                  <span class="bold">Team B:</span> <?php if($groups[1]) { echo $groups[1]->groupname; } else {echo "Team will be Assigned";}?> 
               </div>
               
                <a id="demo-btn-addrow" class="btn btn-purple btn-labeled fa fa-edit" href="<?php echo site_url("site/editcampaignbyuser?id=").$campaignid;?>">Edit Campaign Brief</a>

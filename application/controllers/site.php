@@ -75,7 +75,8 @@ class Site extends CI_Controller
         $campaign= $this->input->get_post("id");
         $data['campaignid']= $this->input->get_post("id");
         $userid=$this->session->userdata('id');
-        $data['campaign'] = $this->campaignaccess_model->getcampaignbyuser($userid);
+        $data['campaign'] = $this->campaignaccess_model->getsinglecampaign($campaign);
+        $data['groups'] = $this->campaignaccess_model->getselectedcampaigngroupbycampaign($campaign);
         $data['title']='My Campaigns';
         $this->load->view('template',$data);
             
@@ -287,7 +288,7 @@ class Site extends CI_Controller
         $campaignid=$this->input->get('id');
 		$this->campaignaccess_model->changecampaigngroupstatustoactive($campaigngroupid,$campaignid);
 //        $data["redirect"]="site/viewcampaigngroup?id=".$campaignid;
-        $data["redirect"]="site/viewcampaigngroupsbycampaign?id=".$campaignid;
+        $data["redirect"]="site/moremycampaign?id=".$campaignid;
         $this->load->view("redirect2",$data);
 	}
 	function changecampaigngroupstatustoreject()

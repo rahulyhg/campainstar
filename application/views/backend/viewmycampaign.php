@@ -39,7 +39,7 @@
 										<th data-hide="phone, tablet">Clicks</th>
 										<th data-hide="phone, tablet">Date</th>
 										<th data-hide="phone, tablet">Status</th>
-										<th data-hide="phone, tablet" style="width:170px;">Action</th>
+										<th data-hide="phone, tablet" style="width:50px;">Action</th>
 									</tr>
 								</thead>
 								
@@ -54,9 +54,9 @@
 										<td><?php echo $row->startdate;?></td>
 										<td><span class="label label-table label-success">Active</span></td>
 										<td>
-										<a href="<?php echo site_url("site/moremycampaign?id=").$row->id;?>" class="btn btn-primary">View</a>
-										<a href="<?php echo site_url("site/viewcampaigngroupsbycampaign?id=").$row->id;?>" class="btn btn-info">Select Team</a>
-<!--										<a href="<?php echo site_url("site/deletecampaignbyuser?id=").$row->id;?>" class="btn btn-danger">Delete</a></td>-->
+										<a href="<?php echo site_url("site/moremycampaign?id=").$row->campaignid;?>" class="btn btn-primary">View</a>
+										<a href="<?php echo site_url("site/viewcampaigngroupsbycampaign?id=").$row->campaignid;?>" class="btn btn-info">Select Team</a>
+<!--										<a href="<?php echo site_url("site/deletecampaignbyuser?id=").$row->campaignid;?>" class="btn btn-danger">Delete</a></td>-->
 									</tr>
 									<?php } ?>
 									
