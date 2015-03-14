@@ -44,19 +44,30 @@ class Site extends CI_Controller
 //            }
 //        }
 //	}
-	public function index()
+//	public function index()
+//	{
+//		$access = array("1","2","3");
+//		$this->checkaccess($access);
+//            $data[ 'page' ] = 'dashboard';
+////            $data['base_url'] = site_url("site/index");
+////            $data['totalcompassadors'] = $this->user_model->gettotalcompassadors();
+////            $data['admindash'] = $this->userpost_model->getadmindash();
+//            $data['title']='Admin Dashboard';
+//            $this->load->view('template',$data);
+//            
+//	}
+	public function viewmycampaign()
 	{
 		$access = array("1","2","3");
 		$this->checkaccess($access);
-            $data[ 'page' ] = 'dashboard';
-//            $data['base_url'] = site_url("site/index");
-//            $data['totalcompassadors'] = $this->user_model->gettotalcompassadors();
-//            $data['admindash'] = $this->userpost_model->getadmindash();
-            $data['title']='Admin Dashboard';
-            $this->load->view('template',$data);
+        $data[ 'page' ] = 'viewmycampaign';
+        $userid=$this->session->userdata('id');
+        $data['table'] = $this->campaignaccess_model->getcampaignbyuser($userid);
+        $data['title']='My Campaigns';
+        $this->load->view('template',$data);
             
 	}
-	public function viewmycampaign()
+    public function index()
 	{
 		$access = array("1","2","3");
 		$this->checkaccess($access);

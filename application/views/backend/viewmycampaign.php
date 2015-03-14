@@ -55,7 +55,7 @@
 										<td><span class="label label-table label-success">Active</span></td>
 										<td>
 										<a href="<?php echo site_url("site/moremycampaign?id=").$row->campaignid;?>" class="btn btn-primary">View</a>
-										<a href="<?php echo site_url("site/viewcampaigngroupsbycampaign?id=").$row->campaignid;?>" class="btn btn-info">Select Team</a>
+<!--										<a href="<?php echo site_url("site/viewcampaigngroupsbycampaign?id=").$row->campaignid;?>" class="btn btn-info">Select Team</a>-->
 <!--										<a href="<?php echo site_url("site/deletecampaignbyuser?id=").$row->campaignid;?>" class="btn btn-danger">Delete</a></td>-->
 									</tr>
 									<?php } ?>

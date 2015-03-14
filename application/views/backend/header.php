@@ -620,7 +620,7 @@
 
                                 <!-- Dropdown footer -->
                                 <div class="pad-all text-right">
-                                    <a href="<?php echo site_url(" login/logout ");?>" class="btn btn-primary">
+                                    <a href="<?php echo site_url("login/logout");?>" class="btn btn-primary">
                                         <i class="fa fa-sign-out fa-fw"></i> Logout
                                     </a>
                                 </div>
