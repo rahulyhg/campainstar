@@ -6,7 +6,6 @@
     <title>Campaign Stars |
         <?php echo $title; ?>
     </title>
-
     <link rel="icon" href="<?php echo base_url('assets/img/camp_logo.png'); ?>" type="image/x-icon" />
     <!--<link rel="icon" href="<?php echo base_url('assets/favicon.ico'); ?>" type="image/x-icon" />-->
     <link href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>" rel="stylesheet">

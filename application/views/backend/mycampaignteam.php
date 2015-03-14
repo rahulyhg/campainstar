@@ -11,7 +11,6 @@
         
         <div class="row">
            <?php
-print_r($table);
             foreach($table as $row)
             {
             ?>
@@ -34,12 +33,15 @@ print_r($table);
                     <!--Panel body-->
                     <div class="panel-body">
                         <div class="tab-content">
-                           
+                           <?php 
+                            $url2=$this->config->item('base_url2');
+                            ?>
                             <div class="tab-pane fade in active text-center" id="demo-tabs-box-1">
-                                <img src="<?php echo base_url('uploads/')."/".$row->image;?>" height="100%" width="100%">
+<!--                                <img src="<?php echo base_url('uploads/')."/".$row->image;?>" height="100%" width="100%">-->
+                                <img src="<?php echo $url2."/uploads/".$row->image;?>" height="100%" width="100%">
                             </div>
                             <div class="tab-pane fade" id="demo-tabs-box-2">
-                                <img src="<?php echo base_url('uploads/')."/".$row->mobileimage;?>" height="100%" width="100%">
+                               <img src="<?php echo $url2."/uploads/".$row->mobileimage;?>" height="100%" width="100%">
                             </div>
                         </div>
                     </div>

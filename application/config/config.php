@@ -37,6 +37,9 @@
 //$config['password']=$myconfig->password;
 $config['base_url']	= '';
 
+//$config['base_url2']	= 'http://wohlig.co.in/campaignadmin';
+$config['base_url2']	= 'http://localhost/campaignadmin';
+
 /*
 |--------------------------------------------------------------------------
 | Index File
