@@ -72,7 +72,7 @@ class User extends CI_Controller
         $data["alerterror"]="New User could not be created.";
         else
         $data["alertsuccess"]="User created Successfully.";
-        $data["redirect"]="site/viewcampaign";
+        $data["redirect"]="login/index";
         $this->load->view("redirect",$data);
     }
     }

@@ -86,7 +86,8 @@ class User_model extends CI_Model
             'emailsystem2'=> $emailsystem2,
             'brandguidlines'=> $brandguidlines,
             'companylogo'=> $companylogo,
-            'guidlinesfile'=> $guidlinesfile
+            'guidlinesfile'=> $guidlinesfile,
+            'accesslevel'=> 3
 		);
 		$query=$this->db->insert( 'user', $data );
 		$id=$this->db->insert_id();
