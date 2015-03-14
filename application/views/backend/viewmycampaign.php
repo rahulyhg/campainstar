@@ -62,7 +62,7 @@
 										<td><?php echo $row->reports[1]->value;?> </td>
 										<td><?php echo $row->startdate;?></td>
 										<td><span class="label label-table label-success">Active</span></td>
-										<td><a class="btn btn-info">Edit</a>
+										<td><a href="<?php echo site_url("site/editcampaignbyuser?id=").$row->id;?>" class="btn btn-info">Edit</a>
 										<a class="btn btn-success">View</a>
 										<a class="btn btn-danger">Delete</a></td>
 									</tr>
