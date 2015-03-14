@@ -469,29 +469,27 @@ class Site extends CI_Controller
             	$data["alertsuccess"]="Campaign created Successfully.";
 				
 				
-				$to = "jagruti@wohlig.com";
-				$subject = "HTML email";
+				$this->load->library('email');
+				$this->email->from('campaign@campaign.com', 'campaign');
+				$this->email->to($emailused); 
 
-				$message = "
-				<html>
+				$this->email->subject('Campaign Star');
+				$this->email->message('<html>
 				<head>
 				<title>Campaign star</title>
 				</head>
 				<body>
-				<p>This email contains HTML Tags!</p>
+				<p>Dear '.$Name.'</p>
+				<p>We have received your campaign brief and have shared it with the best talent.</p>
+				<p>Soon we will be updating you with the teams which would like to take up your campaign.</p>
+				<p>Warm regards,</p>
+				<p>Team Campaignstars</p>
 				</body>
-				</html>
-				";
+				</html>');	
 
-				// Always set content-type when sending HTML email
-				$headers = "MIME-Version: 1.0" . "\r\n";
-				$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+				$this->email->send();
 
-				// More headers
-				$headers .= 'From: <webmaster@example.com>' . "\r\n";
-				$headers .= 'Cc: myboss@example.com' . "\r\n";
-
-				mail($to,$subject,$message,$headers);
+				echo $this->email->print_debugger();
 				
 				
 			}

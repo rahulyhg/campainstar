@@ -74,6 +74,28 @@ class User extends CI_Controller
         }
         else
         {
+			$this->load->library('email');
+				$this->email->from('campaign@campaign.com', 'campaign');
+				$this->email->to($emailaddress); 
+
+				$this->email->subject('Campaign Star');
+				$this->email->message('<html>
+				<head>
+				<title>Campaign star</title>
+				</head>
+				<body>
+				<p>Dear '.$fullname.'</p>
+				<p>Thank you for signing up with campaignstars.</p>
+				<p>Click here to confirm your account.</p>
+				<p>Warm regards,</p>
+				<p>Team Campaignstars</p>
+				</body>
+				</html>');	
+
+				$this->email->send();
+
+				echo $this->email->print_debugger();
+				
             $data["alertsuccess"]="User created Successfully.";
             $data["redirect"]="site/createcampaign";
         }
