@@ -14,7 +14,7 @@
         <!--End page title-->
         <ol class="breadcrumb">
             <li><a href="#">Home</a>
-            </li>
+            </li></ol>
             <!--Page content-->
             <!--===================================================-->
             <div id="page-content">
