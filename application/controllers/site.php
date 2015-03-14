@@ -67,6 +67,17 @@ class Site extends CI_Controller
         $this->load->view('template',$data);
             
 	}
+	public function moremycampaign()
+	{
+		$access = array("1","2","3");
+		$this->checkaccess($access);
+        $data[ 'page' ] = 'moremycampaign';
+        $userid=$this->session->userdata('id');
+        $data['table'] = $this->campaignaccess_model->getcampaignbyuser($userid);
+        $data['title']='My Campaigns';
+        $this->load->view('template',$data);
+            
+	}
 	public function editcampaignbyuser()
 	{
 		$access = array("1","2","3");

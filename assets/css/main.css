@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
-body {
+ body {
     background-color: #ECECEC;
     font-weight: 500;
 }
@@ -277,4 +277,25 @@ small.wz-desc.box-block {
 }
 .grey {
     color: #bbbbbb;
+}
+.no-margin .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+.w100 {
+    width: 100%;
+}
+.w100 .page-header {
+    color: #454545;
+}
+.w100 .breadcrumb li,
+.w100 .breadcrumb li a {
+    color: #454545;
+}
+.bold {
+    font-weight: 600;
+}
+.content1 {
+    font-size: 14px;
+    margin-bottom: 10px;
 }

@@ -2,7 +2,7 @@
 
     <!--CONTENT CONTAINER-->
     <!--===================================================-->
-    <div id="content-container">
+    <div class="formbox w100">
 
         <!--Page Title-->
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
