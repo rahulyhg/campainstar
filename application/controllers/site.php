@@ -94,9 +94,9 @@ class Site extends CI_Controller
         $this->checkaccess($access);
         $this->form_validation->set_rules("id","ID","trim");
         $this->form_validation->set_rules("Name","Name","trim");
-        $this->form_validation->set_rules("startdate","Start Date","trim");
-        $this->form_validation->set_rules("testdate","Test Date","trim");
-        $this->form_validation->set_rules("publishingdate","Publishing Date","trim");
+//        $this->form_validation->set_rules("startdate","Start Date","trim");
+//        $this->form_validation->set_rules("testdate","Test Date","trim");
+//        $this->form_validation->set_rules("publishingdate","Publishing Date","trim");
         $this->form_validation->set_rules("user","User","trim");
         if($this->form_validation->run()==FALSE)
         {
@@ -112,11 +112,113 @@ class Site extends CI_Controller
         {
             $id=$this->input->get_post("id");
             $Name=$this->input->get_post("Name");
-            $startdate=$this->input->get_post("startdate");
-            $testdate=$this->input->get_post("testdate");
-            $publishingdate=$this->input->get_post("publishingdate");
-            $user=$this->input->get_post("user");
-            if($this->campaignaccess_model->edit($id,$Name,$startdate,$testdate,$publishingdate,$user)==0)
+            $emailused=$this->input->get_post("email_used");
+            $question=$this->input->get_post("question");
+            $deadline=$this->input->get_post("deadline");
+            $goals=$this->input->get_post("goals");
+            $audience=$this->input->get_post("audience");
+            $callactivate=$this->input->get_post("callactivate");
+            $reqelem=$this->input->get_post("reqelem");
+            $keywords=$this->input->get_post("keywords");
+            $specific=$this->input->get_post("specific");
+            $outline=$this->input->get_post("outline");
+            $avoid=$this->input->get_post("avoid");
+            $material=$this->input->get_post("material");
+            $instructions=$this->input->get_post("instructions");
+            $uorganization=$this->input->get_post("uorganization");
+            $industryp=$this->input->get_post("industryp");
+            $propositions=$this->input->get_post("propositions");
+            $propositions1=$this->input->get_post("propositions1");
+            $propositions2=$this->input->get_post("propositions2");
+            $itrends=$this->input->get_post("itrends");
+            $mcompetitors=$this->input->get_post("mcompetitors");
+            $branding=$this->input->get_post("branding");
+            $user=$this->session->userdata('id');
+//            $startdate=$this->input->get_post("startdate");
+//            $testdate=$this->input->get_post("testdate");
+//            $publishingdate=$this->input->get_post("publishingdate");
+            
+            
+            $config['upload_path'] = './uploads/';
+			$config['allowed_types'] = '*';
+			$this->load->library('upload', $config);
+			$filename="specificfile";
+			$specificfile="";
+			if (  $this->upload->do_upload($filename))
+			{
+				$uploaddata = $this->upload->data();
+				$specificfile=$uploaddata['file_name'];
+			}
+            
+            if($specificfile=="")
+            {
+            $specificfile=$this->campaignaccess_model->getspecificfilebycampaignid($id);
+               // print_r($specificfile);
+                $specificfile=$specificfile->specificfile;
+            }
+            
+            $config['upload_path'] = './uploads/';
+			$config['allowed_types'] = '*';
+			$this->load->library('upload', $config);
+			$filename="outlinefile";
+			$outlinefile="";
+			if (  $this->upload->do_upload($filename))
+			{
+				$uploaddata = $this->upload->data();
+				$outlinefile=$uploaddata['file_name'];
+			}
+            
+            if($outlinefile=="")
+            {
+            $outlinefile=$this->campaignaccess_model->getoutlinefilebycampaignid($id);
+               // print_r($outlinefile);
+                $outlinefile=$outlinefile->outlinefile;
+            }
+            
+            $config['upload_path'] = './uploads/';
+			$config['allowed_types'] = '*';
+			$this->load->library('upload', $config);
+			$filename="materialfile";
+			$materialfile="";
+			if (  $this->upload->do_upload($filename))
+			{
+				$uploaddata = $this->upload->data();
+				$materialfile=$uploaddata['file_name'];
+			}
+            
+            if($materialfile=="")
+            {
+            $materialfile=$this->campaignaccess_model->getmaterialfilebycampaignid($id);
+               // print_r($materialfile);
+                $materialfile=$materialfile->materialfile;
+            }
+            
+            $config['upload_path'] = './uploads/';
+			$config['allowed_types'] = '*';
+			$this->load->library('upload', $config);
+			$filename="brandingfile";
+			$brandingfile="";
+			if (  $this->upload->do_upload($filename))
+			{
+				$uploaddata = $this->upload->data();
+				$brandingfile=$uploaddata['file_name'];
+			}
+            
+            if($brandingfile=="")
+            {
+            $brandingfile=$this->campaignaccess_model->getbrandingfilebycampaignid($id);
+               // print_r($brandingfile);
+                $brandingfile=$brandingfile->brandingfile;
+            }
+            
+            
+//            $Name=$this->input->get_post("Name");
+//            $startdate=$this->input->get_post("startdate");
+//            $testdate=$this->input->get_post("testdate");
+//            $publishingdate=$this->input->get_post("publishingdate");
+//            $user=$this->input->get_post("user");
+            
+            if($this->campaignaccess_model->edit($id,$Name,$emailused,$question,$deadline,$goals,$audience,$callactivate,$reqelem,$keywords,$specific,$outline,$avoid,$material,$instructions,$uorganization,$industryp,$propositions,$propositions1,$propositions2,$itrends,$mcompetitors,$branding,$specificfile,$outlinefile,$materialfile,$brandingfile,$user)==0)
                 $data["alerterror"]="New campaign could not be Updated.";
             else
                 $data["alertsuccess"]="campaign Updated Successfully.";
@@ -205,10 +307,14 @@ class Site extends CI_Controller
     {
         $access=array("3");
         $this->checkaccess($access);
+        print_r($_POST);
         $this->form_validation->set_rules("Name","Name","trim|required");
-        $this->form_validation->set_rules("startdate","Start Date","trim|required");
-        $this->form_validation->set_rules("testdate","Test Date","trim|required");
-        $this->form_validation->set_rules("publishingdate","Publishing Date","trim|required");
+        $this->form_validation->set_rules("email_used","email_used","trim");
+        $this->form_validation->set_rules("question","question","trim");
+        $this->form_validation->set_rules("deadline","deadline","trim");
+//        $this->form_validation->set_rules("startdate","Start Date","trim|required");
+//        $this->form_validation->set_rules("testdate","Test Date","trim|required");
+//        $this->form_validation->set_rules("publishingdate","Publishing Date","trim|required");
         if($this->form_validation->run()==FALSE)
         {
             $data["alerterror"]=validation_errors();
@@ -220,11 +326,79 @@ class Site extends CI_Controller
         else
         {
             $Name=$this->input->get_post("Name");
-            $startdate=$this->input->get_post("startdate");
-            $testdate=$this->input->get_post("testdate");
-            $publishingdate=$this->input->get_post("publishingdate");
+            $emailused=$this->input->get_post("email_used");
+            $question=$this->input->get_post("question");
+            $deadline=$this->input->get_post("deadline");
+            $goals=$this->input->get_post("goals");
+            $audience=$this->input->get_post("audience");
+            $callactivate=$this->input->get_post("callactivate");
+            $reqelem=$this->input->get_post("reqelem");
+            $keywords=$this->input->get_post("keywords");
+            $specific=$this->input->get_post("specific");
+            $outline=$this->input->get_post("outline");
+            $avoid=$this->input->get_post("avoid");
+            $material=$this->input->get_post("material");
+            $instructions=$this->input->get_post("instructions");
+            $uorganization=$this->input->get_post("uorganization");
+            $industryp=$this->input->get_post("industryp");
+            $propositions=$this->input->get_post("propositions");
+            $propositions1=$this->input->get_post("propositions1");
+            $propositions2=$this->input->get_post("propositions2");
+            $itrends=$this->input->get_post("itrends");
+            $mcompetitors=$this->input->get_post("mcompetitors");
+            $branding=$this->input->get_post("branding");
             $user=$this->session->userdata('id');
-            if($this->campaignaccess_model->create($Name,$startdate,$testdate,$publishingdate,$user)==0)
+//            $startdate=$this->input->get_post("startdate");
+//            $testdate=$this->input->get_post("testdate");
+//            $publishingdate=$this->input->get_post("publishingdate");
+            
+            
+            $config['upload_path'] = './uploads/';
+			$config['allowed_types'] = '*';
+			$this->load->library('upload', $config);
+			$filename="specificfile";
+			$specificfile="";
+			if (  $this->upload->do_upload($filename))
+			{
+				$uploaddata = $this->upload->data();
+				$specificfile=$uploaddata['file_name'];
+			}
+            
+            $config['upload_path'] = './uploads/';
+			$config['allowed_types'] = '*';
+			$this->load->library('upload', $config);
+			$filename="outlinefile";
+			$outlinefile="";
+			if (  $this->upload->do_upload($filename))
+			{
+				$uploaddata = $this->upload->data();
+				$outlinefile=$uploaddata['file_name'];
+			}
+            
+            $config['upload_path'] = './uploads/';
+			$config['allowed_types'] = '*';
+			$this->load->library('upload', $config);
+			$filename="materialfile";
+			$materialfile="";
+			if (  $this->upload->do_upload($filename))
+			{
+				$uploaddata = $this->upload->data();
+				$materialfile=$uploaddata['file_name'];
+			}
+            
+            $config['upload_path'] = './uploads/';
+			$config['allowed_types'] = '*';
+			$this->load->library('upload', $config);
+			$filename="brandingfile";
+			$brandingfile="";
+			if (  $this->upload->do_upload($filename))
+			{
+				$uploaddata = $this->upload->data();
+				$brandingfile=$uploaddata['file_name'];
+			}
+            
+            
+            if($this->campaignaccess_model->create($Name,$emailused,$question,$deadline,$goals,$audience,$callactivate,$reqelem,$keywords,$specific,$outline,$avoid,$material,$instructions,$uorganization,$industryp,$propositions,$propositions1,$propositions2,$itrends,$mcompetitors,$branding,$specificfile,$outlinefile,$materialfile,$brandingfile,$user)==0)
             $data["alerterror"]="New Campaign could not be created.";
             else
             $data["alertsuccess"]="Campaign created Successfully.";

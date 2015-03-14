@@ -5,13 +5,35 @@ class campaignaccess_model extends CI_Model
 {
     
     
-    public function create($Name,$startdate,$testdate,$publishingdate,$user)
+    public function create($Name,$emailused,$question,$deadline,$goals,$audience,$callactivate,$reqelem,$keywords,$specific,$outline,$avoid,$material,$instructions,$uorganization,$industryp,$propositions,$propositions1,$propositions2,$itrends,$mcompetitors,$branding,$specificfile,$outlinefile,$materialfile,$brandingfile,$user)
     {
         $data=array(
             "Name" => $Name,
-            "startdate" => $startdate,
-            "testdate" => $testdate,
-            "publishingdate" => $publishingdate,
+            "emailused" => $emailused,
+            "question" => $question,
+            "deadline" => $deadline,
+            "goals" => $goals,
+            "audience" => $audience,
+            "callactivate" => $callactivate,
+            "reqelem" => $reqelem,
+            "keywords" => $keywords,
+            "specific" => $specific,
+            "outline" => $outline,
+            "avoid" => $avoid,
+            "material" => $material,
+            "instructions" => $instructions,
+            "uorganization" => $uorganization,
+            "industryp" => $industryp,
+            "propositions" => $propositions,
+            "propositions1" => $propositions1,
+            "propositions2" => $propositions2,
+            "itrends" => $itrends,
+            "mcompetitors" => $mcompetitors,
+            "branding" => $branding,
+            "specificfile" => $specificfile,
+            "outlinefile" => $outlinefile,
+            "materialfile" => $materialfile,
+            "brandingfile" => $brandingfile,
             "user" => $user,
             "status"=>1
         );
@@ -22,6 +44,24 @@ class campaignaccess_model extends CI_Model
         else
             return  1;
     }
+    
+//    public function create($Name,$startdate,$testdate,$publishingdate,$user)
+//    {
+//        $data=array(
+//            "Name" => $Name,
+//            "startdate" => $startdate,
+//            "testdate" => $testdate,
+//            "publishingdate" => $publishingdate,
+//            "user" => $user,
+//            "status"=>1
+//        );
+//        $query=$this->db->insert( "campaign_campaign", $data );
+//        $id=$this->db->insert_id();
+//        if(!$query)
+//            return  0;
+//        else
+//            return  1;
+//    }
     public function beforeedit($id)
     {
         $this->db->where("id",$id);
@@ -39,9 +79,39 @@ class campaignaccess_model extends CI_Model
         $query=$this->db->query("SELECT * FROM `campaign_campaign` WHERE `user`='$id'")->result();
         return $query;
     }
-    public function edit($id,$Name,$startdate,$testdate,$publishingdate,$user)
+    public function edit($id,$Name,$emailused,$question,$deadline,$goals,$audience,$callactivate,$reqelem,$keywords,$specific,$outline,$avoid,$material,$instructions,$uorganization,$industryp,$propositions,$propositions1,$propositions2,$itrends,$mcompetitors,$branding,$specificfile,$outlinefile,$materialfile,$brandingfile,$user)
     {
-        $data=array("Name" => $Name,"startdate" => $startdate,"testdate" => $testdate,"publishingdate" => $publishingdate,"user" => $user);
+//        $data=array("Name" => $Name,"startdate" => $startdate,"testdate" => $testdate,"publishingdate" => $publishingdate,"user" => $user);
+        $data=array(
+            "Name" => $Name,
+            "emailused" => $emailused,
+            "question" => $question,
+            "deadline" => $deadline,
+            "goals" => $goals,
+            "audience" => $audience,
+            "callactivate" => $callactivate,
+            "reqelem" => $reqelem,
+            "keywords" => $keywords,
+            "specific" => $specific,
+            "outline" => $outline,
+            "avoid" => $avoid,
+            "material" => $material,
+            "instructions" => $instructions,
+            "uorganization" => $uorganization,
+            "industryp" => $industryp,
+            "propositions" => $propositions,
+            "propositions1" => $propositions1,
+            "propositions2" => $propositions2,
+            "itrends" => $itrends,
+            "mcompetitors" => $mcompetitors,
+            "branding" => $branding,
+            "specificfile" => $specificfile,
+            "outlinefile" => $outlinefile,
+            "materialfile" => $materialfile,
+            "brandingfile" => $brandingfile,
+            "user" => $user,
+            "status"=>1
+        );
         $this->db->where( "id", $id );
         $query=$this->db->update( "campaign_campaign", $data );
         return 1;
@@ -213,5 +283,34 @@ WHERE `campaign_campaignresult`. `campaign`='$id'")->row();
 	  return $return;
     }
      
+	public function getspecificfilebycampaignid($id)
+	{
+		$query=$this->db->query("SELECT `specificfile` FROM `campaign_campaign` WHERE `id`='$id'")->row();
+		
+		
+		return $query;
+	}
+	public function getoutlinefilebycampaignid($id)
+	{
+		$query=$this->db->query("SELECT `outlinefile` FROM `campaign_campaign` WHERE `id`='$id'")->row();
+		
+		
+		return $query;
+	}
+	public function getmaterialfilebycampaignid($id)
+	{
+		$query=$this->db->query("SELECT `materialfile` FROM `campaign_campaign` WHERE `id`='$id'")->row();
+		
+		
+		return $query;
+	}
+	public function getbrandingfilebycampaignid($id)
+	{
+		$query=$this->db->query("SELECT `brandingfile` FROM `campaign_campaign` WHERE `id`='$id'")->row();
+		
+		
+		return $query;
+	}
+    
 }
 ?>

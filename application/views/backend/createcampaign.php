@@ -784,7 +784,7 @@
                         <form class='form-horizontal tasi-form' method='post' action='<?php echo site_url("site/createcampaignsubmit");?>' enctype='multipart/form-data'>
                             <div class="panel-body">
                                 <div class="form-group">
-                                    <label class="control-label" for="normal-field">Enter Your Name</label>
+                                    <label class="control-label" for="normal-field">Enter Name</label>
                                     <div class="">
                                         <input type="text" id="normal-field" class="form-control" name="Name" value='<?php echo set_value(' Name ');?>'>
                                     </div>
@@ -794,15 +794,19 @@
                                     <div class="">
                                         <select name="email_used" id="email_used" class="form-control" required="required">
                                             <option value="" disabled="" selected="">Please Select</option>
-                                            <option va>Constant Contact</option>
+                                            <option value="Constant Contact">Constant Contact</option>
+<!--
                                             <option>Eloqua</option>
                                             <option>Hubspot</option>
-                                            <option>MailChimp</option>
+-->
+                                            <option value="MailChimp">MailChimp</option>
+<!--
                                             <option>Marketo</option>
                                             <option>None</option>
                                             <option>Pardot</option>
                                             <option>Vertical Response</option>
-                                            <option>Other</option>
+-->
+                                            <option value="Other">Other</option>
                                         </select>
 
                                     </div>
@@ -813,10 +817,10 @@
                                     <div class="">
                                         <select name="question" id="assetselect" class=" form-control " required="required">
                                             <option value="" disabled="" selected="">Please Select</option>
-                                            <option>Newsletter</option>
-                                            <option>Promotional Campaign</option>
-                                            <option>Press Release</option>
-                                            <option>Other</option>
+                                            <option value="Newsletter">Newsletter</option>
+                                            <option value="Promotional Campaign">Promotional Campaign</option>
+                                            <option value="Press Release">Press Release</option>
+                                            <option value="Other">Other</option>
                                         </select>
 
                                     </div>
@@ -826,6 +830,7 @@
                                     <p class="grey">On what date do you need to send your final, tested email?</p>
                                     <input type="date" name="deadline" id="deadline" class=" form-control" required="required">
                                 </div>
+<!--
                                 <div class=" form-group ">
                                     <label class="control-label" for="resources">What creative resources do you need?</label>
                                     <p class="grey">Select all that apply.</p>
@@ -835,114 +840,132 @@
                                     <input type="checkbox" name="resources[]" value="Visual design">
                                     <label for="resources"> &nbsp; Visual design </label>
                                 </div>
+-->
                                 <div class=" form-group ">
                                     <label class="control-label" for="goals">What are your campaign goals?</label>
                                     <p class="grey">Give us the why. Tell us about your specific business goals, metrics targets, how this relates to your market strategy, etc.</p>
                                     <textarea class=" form-control " name="goals" rows="3" required="required"></textarea>
                                 </div>
+                                
                                 <div class=" form-group ">
                                     <label class="control-label" for="audience">Who is your audience?</label>
                                     <p class="grey">Consider factors such as industry, job role, lifestyle, location, age, etc. </p>
                                     <textarea class=" form-control " name="audience" rows="3" required="required"></textarea>
                                 </div>
+                                
                                 <div class=" form-group ">
                                     <label class="control-label" for="callactivate">What is your call to action?</label>
                                     <p class="grey">What specific action do you want your audience to take after consuming your content? Click a link, take an assesment, buy your product, contact you, etc. </p>
                                     <textarea class=" form-control " name="callactivate" rows="3"></textarea>
                                 </div>
+                                
                                 <div class=" form-group ">
                                     <label class="control-label" for="reqelem">What required elements must this content or campaign include?</label>
                                     <p class="grey">Consider factors such as industry, job role, lifestyle, location, age, etc. </p>
                                     <textarea class=" form-control " name="reqelem" rows="3"></textarea>
                                 </div>
+                                
                                 <div class=" form-group ">
                                     <label class="control-label" for="keywords">Are you targeting specific keywords?</label>
                                     <p class="grey">List up to 5 words or phrases we should include.</p>
                                     <textarea class=" form-control " name="keywords" rows="3"></textarea>
                                 </div>
+                                
                                 <div class=" form-group ">
                                     <label class="control-label" for="specific">Should we include any specific messaging?</label>
                                     <p class="grey">List catchphrases, slogans, statements, etc.</p>
                                     <textarea class=" form-control " name="specific" rows="3"></textarea>
                                 </div>
+                                
                                 <div class=" form-group " style="margin-bottom: 0;">
                                     <label class="control-label" for="specific_or">OR</label>
                                 </div>
+                                
                                 <div class=" form-group ">
                                     <div class="col-lg-12 fileupload fileupload-new" data-provides="fileupload"> Upload Documents <span class="btn btn-primary btn-file custombtn"><span class="fileupload-new">BROWSE</span>
-                                        <input type="file" name="file1" id="file1" />
+                                        <input type="file" name="specificfile" id="specificfile" />
                                         </span> <span class="fileupload-preview"></span>
                                     </div>
                                 </div>
+                                
                                 <div class=" form-group ">
                                     <label class="control-label" for="outline">Do you have an outline?</label>
                                     <p class="grey">Already on top of it? Great! Upload or paste in the copy. </p>
                                     <textarea class=" form-control " name="outline" rows="3" aria-required="true"></textarea>
                                 </div>
+                                
                                 <div class=" form-group ">
                                     <div class="col-lg-12 fileupload fileupload-new" data-provides="fileupload"> Upload Documents <span class="btn btn-primary btn-file custombtn"><span class="fileupload-new">BROWSE</span>
-                                        <input type="file" name="file1" id="file1" />
+                                        <input type="file" name="outlinefile" id="outlinefile" />
                                         </span> <span class="fileupload-preview"></span>
                                     </div>
                                 </div>
+                                
                                 <div class=" form-group ">
                                     <label class="control-label" for="avoid">Should we avoid any specific topics, phrases or jargon?</label>
                                     <p class="grey">List specific examples.</p>
                                     <textarea class=" form-control " name="avoid" rows="3"></textarea>
                                 </div>
+                                
                                 <div class=" form-group ">
                                     <label class="control-label" for="material">Can you provide any source material?</label>
                                     <p class="grey">Include any additional Guidelines your writer should follow, such as existing content or resources we should source, etc. </p>
                                     <textarea class=" form-control " name="material" rows="3" aria-required="true"></textarea>
                                 </div>
+                                
                                 <div class=" form-group ">
                                     <div class="col-lg-12 fileupload fileupload-new" data-provides="fileupload"> Upload Documents <span class="btn btn-primary btn-file custombtn"><span class="fileupload-new">BROWSE</span>
-                                        <input type="file" name="file1" id="file1" />
+                                        <input type="file" name="materialfile" id="materialfile" />
                                         </span> <span class="fileupload-preview"></span>
                                     </div>
                                 </div>
+                                
                                 <div class=" form-group ">
                                     <label class="control-label" for="instructions">Any special instructions we should follow?</label>
                                     <p class="grey">Include anything here not covered by the creative brief so far.</p>
                                     <textarea class=" form-control " name="instructions" rows="3"></textarea>
                                 </div>
+                                
                                 <div class=" form-group ">
                                     <label class="control-label" for="uorganization">Tell us about your organization.</label>
                                     <p class="grey">Explain what your company does, sells or provides. </p>
                                     <textarea class=" form-control " name="uorganization" rows="3" required="required"></textarea>
                                 </div>
+                                
                                 <div class=" form-group ">
                                     <label class="control-label" for="industryp">What industry do you play in?</label>
                                     <p class="grey">Select your primary industry.</p>
                                     <select name="industryp" class=" form-control " required="required">
                                         <option value="" disabled="" selected="">Please Select</option>
 
-                                        <option> Accounting</option>
-                                        <option>Automotive</option>
-                                        <option>Advertising</option>
-                                        <option>Banking</option>
-                                        <option>Bio Technology</option>
-                                        <option>Chemical</option>
-                                        <option>Consulting</option>
-                                        <option>Defense</option>
-                                        <option>Education</option>
-                                        <option>Eletronics</option>
-                                        <option>Environment</option>
-                                        <option>Energy</option>
-                                        <option>Entertainement</option>
-                                        <option>Financial Services</option>
-                                        <option>Food</option>
-                                        <option>Healthcare</option>
-                                        <option>Internet</option>
-                                        <option>Legal</option>
-                                        <option>Manufacturing</option>
-                                        <option>Music</option>
-                                        <option>News</option>
-                                        <option>Real Estate</option>
-                                        <option>Software</option>
-                                        <option>Sports</option>
-                                        <option>Transportation</option>
-                                        <option>Others</option>
+                                        <option value="Accounting"> Accounting</option>
+                                        <option value="Automotive">Automotive</option>
+                                        <option value="Advertising">Advertising</option>
+                                        <option value="Banking">Banking</option>
+                                        <option value="Bio Technology">Bio Technology</option>
+                                        <option value="Chemical">Chemical</option>
+                                        <option value="Consulting">Consulting</option>
+                                        <option value="Defense">Defense</option>
+                                        <option value="Education">Education</option>
+                                        <option value="Eletronics">Eletronics</option>
+                                        <option value="Environment">Environment</option>
+                                        <option value="Energy">Energy</option>
+                                        <option value="Entertainement">Entertainement</option>
+                                        <option value="Financial Services">Financial Services</option>
+                                        <option value="Food">Food</option>
+                                        <option value="Healthcare">Healthcare</option>
+                                        <option value="Internet">Internet</option>
+<!--
+                                        <option value="">Legal</option>
+                                        <option value="">Manufacturing</option>
+                                        <option value="">Music</option>
+                                        <option value="">News</option>
+                                        <option value="">Real Estate</option>
+                                        <option value="">Software</option>
+                                        <option value="">Sports</option>
+                                        <option value="">Transportation</option>
+-->
+                                        <option value="Others">Others</option>
 
 
                                     </select>
@@ -970,7 +993,7 @@
                                     <textarea class=" form-control " name="branding" rows="3"></textarea>
                                 </div>
                                 <div class="col-lg-12 fileupload fileupload-new" data-provides="fileupload"> Upload Design <span class="btn btn-primary btn-file custombtn"><span class="fileupload-new">BROWSE</span>
-                                    <input type="file" name="file" id="file" />
+                                    <input type="file" name="brandingfile" id="brandingfile" />
                                     </span>
                                 </div>
                             </div>
@@ -980,7 +1003,7 @@
                                 <label class="control-label" for="normal-field">&nbsp;</label>
                                 <div class="col-sm-4">
                                     <button type="submit" class="btn btn-primary">Submit</button>
-                                    <a href="<?php echo site_url(" site/viewpage "); ?>" class="btn btn-secondary">Cancel</a>
+                                    <a href="<?php echo site_url("site/viewmycamaign"); ?>" class="btn btn-secondary">Cancel</a>
                                 </div>
                             </div>
                         </form>

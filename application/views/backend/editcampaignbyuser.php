@@ -791,6 +791,216 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label class="control-label" for="normal-field">Email System Used</label>
+                                    <div class="">
+                                        <select name="email_used" id="email_used" class="form-control" required="required">
+                                            <option value="">Please Select</option>
+                                            <option value="Constant Contact"<?php if ($before->emailused == 'Constant Contact') echo ' selected="selected"'; ?>>Constant Contact</option>
+<!--
+                                            <option>Eloqua</option>
+                                            <option>Hubspot</option>
+-->
+                                            <option value="MailChimp"<?php if ($before->emailused == 'MailChimp') echo ' selected="selected"'; ?>>MailChimp</option>
+<!--
+                                            <option>Marketo</option>
+                                            <option>None</option>
+                                            <option>Pardot</option>
+                                            <option>Vertical Response</option>
+-->
+                                            <option value="Other"<?php if ($before->emailused == 'Other') echo ' selected="selected"'; ?>>Other</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="normal-field">What type of asset(s) do you want to create?</label>
+                                    <p class="grey">Select one or more assets to start building your campaign.</p>
+                                    <div class="">
+                                        <select name="question" id="assetselect" class=" form-control " required="required">
+                                            <option value="" disabled="" selected="">Please Select</option>
+                                            <option value="Newsletter"<?php if ($before->question == 'Newsletter') echo ' selected="selected"'; ?>>Newsletter</option>
+                                            <option value="Promotional Campaign"<?php if ($before->question == 'Promotional Campaign') echo ' selected="selected"'; ?>>Promotional Campaign</option>
+                                            <option value="Press Release"<?php if ($before->question == 'Press Release') echo ' selected="selected"'; ?>>Press Release</option>
+                                            <option value="Other"<?php if ($before->question == 'Other') echo ' selected="selected"'; ?>>Other</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="deadline">What is your deadline?</label>
+                                    <p class="grey">On what date do you need to send your final, tested email?</p>
+                                    <input type="date" name="deadline" id="deadline" class=" form-control" required="required"value='<?php echo set_value(' deadline ',$before->deadline);?>'>
+                                </div>
+<!--
+                                <div class=" form-group ">
+                                    <label class="control-label" for="resources">What creative resources do you need?</label>
+                                    <p class="grey">Select all that apply.</p>
+                                    <input type="checkbox" name="resources[]" value="Copy development">
+                                    <label for="resources"> &nbsp; Copy development </label>
+                                    <br>
+                                    <input type="checkbox" name="resources[]" value="Visual design">
+                                    <label for="resources"> &nbsp; Visual design </label>
+                                </div>
+-->
+                                <div class=" form-group ">
+                                    <label class="control-label" for="goals">What are your campaign goals?</label>
+                                    <p class="grey">Give us the why. Tell us about your specific business goals, metrics targets, how this relates to your market strategy, etc.</p>
+                                    <textarea class=" form-control " name="goals" rows="3" required="required"><?php echo set_value(' goals ',$before->goals);?></textarea>
+                                </div>
+                                
+                                <div class=" form-group ">
+                                    <label class="control-label" for="audience">Who is your audience?</label>
+                                    <p class="grey">Consider factors such as industry, job role, lifestyle, location, age, etc. </p>
+                                    <textarea class=" form-control " name="audience" rows="3" required="required"><?php echo set_value(' audience ',$before->audience);?></textarea>
+                                </div>
+                                
+                                <div class=" form-group ">
+                                    <label class="control-label" for="callactivate">What is your call to action?</label>
+                                    <p class="grey">What specific action do you want your audience to take after consuming your content? Click a link, take an assesment, buy your product, contact you, etc. </p>
+                                    <textarea class=" form-control " name="callactivate" rows="3"><?php echo set_value(' callactivate ',$before->callactivate);?></textarea>
+                                </div>
+                                
+                                <div class=" form-group ">
+                                    <label class="control-label" for="reqelem">What required elements must this content or campaign include?</label>
+                                    <p class="grey">Consider factors such as industry, job role, lifestyle, location, age, etc. </p>
+                                    <textarea class=" form-control " name="reqelem" rows="3"><?php echo set_value(' reqelem ',$before->reqelem);?></textarea>
+                                </div>
+                                
+                                <div class=" form-group ">
+                                    <label class="control-label" for="keywords">Are you targeting specific keywords?</label>
+                                    <p class="grey">List up to 5 words or phrases we should include.</p>
+                                    <textarea class=" form-control " name="keywords" rows="3"><?php echo set_value(' keywords ',$before->keywords);?></textarea>
+                                </div>
+                                
+                                <div class=" form-group ">
+                                    <label class="control-label" for="specific">Should we include any specific messaging?</label>
+                                    <p class="grey">List catchphrases, slogans, statements, etc.</p>
+                                    <textarea class=" form-control " name="specific" rows="3">value='<?php echo set_value(' specific ',$before->specific);?>'</textarea>
+                                </div>
+                                
+                                <div class=" form-group " style="margin-bottom: 0;">
+                                    <label class="control-label" for="specific_or">OR</label>
+                                </div>
+                                
+                                <div class=" form-group ">
+                                    <div class="col-lg-12 fileupload fileupload-new" data-provides="fileupload"> Upload Documents <span class="btn btn-primary btn-file custombtn"><span class="fileupload-new">BROWSE</span>
+                                        <input type="file" name="specificfile" id="specificfile" value='<?php echo set_value(' specificfile ',$before->specificfile);?>'/>
+                                        </span> <span class="fileupload-preview"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class=" form-group ">
+                                    <label class="control-label" for="outline">Do you have an outline?</label>
+                                    <p class="grey">Already on top of it? Great! Upload or paste in the copy. </p>
+                                    <textarea class=" form-control " name="outline" rows="3" aria-required="true"><?php echo set_value(' outline ',$before->outline);?></textarea>
+                                </div>
+                                
+                                <div class=" form-group ">
+                                    <div class="col-lg-12 fileupload fileupload-new" data-provides="fileupload"> Upload Documents <span class="btn btn-primary btn-file custombtn"><span class="fileupload-new">BROWSE</span>
+                                        <input type="file" name="outlinefile" id="outlinefile"<?php echo set_value(' outlinefile ',$before->outlinefile);?> />
+                                        </span> <span class="fileupload-preview"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class=" form-group ">
+                                    <label class="control-label" for="avoid">Should we avoid any specific topics, phrases or jargon?</label>
+                                    <p class="grey">List specific examples.</p>
+                                    <textarea class=" form-control " name="avoid" rows="3"><?php echo set_value(' avoid ',$before->avoid);?></textarea>
+                                </div>
+                                
+                                <div class=" form-group ">
+                                    <label class="control-label" for="material">Can you provide any source material?</label>
+                                    <p class="grey">Include any additional Guidelines your writer should follow, such as existing content or resources we should source, etc. </p>
+                                    <textarea class=" form-control " name="material" rows="3" aria-required="true"><?php echo set_value(' material ',$before->material);?></textarea>
+                                </div>
+                                
+                                <div class=" form-group ">
+                                    <div class="col-lg-12 fileupload fileupload-new" data-provides="fileupload"> Upload Documents <span class="btn btn-primary btn-file custombtn"><span class="fileupload-new">BROWSE</span>
+                                        <input type="file" name="materialfile" id="materialfile" <?php echo set_value(' materialfile ',$before->materialfile);?>/>
+                                        </span> <span class="fileupload-preview"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class=" form-group ">
+                                    <label class="control-label" for="instructions">Any special instructions we should follow?</label>
+                                    <p class="grey">Include anything here not covered by the creative brief so far.</p>
+                                    <textarea class=" form-control " name="instructions" rows="3"><?php echo set_value(' instructions ',$before->instructions);?></textarea>
+                                </div>
+                                
+                                <div class=" form-group ">
+                                    <label class="control-label" for="uorganization">Tell us about your organization.</label>
+                                    <p class="grey">Explain what your company does, sells or provides. </p>
+                                    <textarea class=" form-control " name="uorganization" rows="3" required="required"><?php echo set_value(' uorganization ',$before->uorganization);?></textarea>
+                                </div>
+                                
+                                <div class=" form-group ">
+                                    <label class="control-label" for="industryp">What industry do you play in?</label>
+                                    <p class="grey">Select your primary industry.</p>
+                                    <select name="industryp" class=" form-control " required="required">
+                                        <option value="" disabled="" selected="">Please Select</option>
+
+                                        <option value="Accounting"<?php if ($before->industryp == 'Accounting') echo ' selected="selected"'; ?>> Accounting</option>
+                                        <option value="Automotive"<?php if ($before->industryp == 'Automotive') echo ' selected="selected"'; ?>>Automotive</option>
+                                        <option value="Advertising"<?php if ($before->industryp == 'Advertising') echo ' selected="selected"'; ?>>Advertising</option>
+                                        <option value="Banking"<?php if ($before->industryp == 'Banking') echo ' selected="selected"'; ?>>Banking</option>
+                                        <option value="Bio Technology"<?php if ($before->industryp == 'Bio Technology') echo ' selected="selected"'; ?>>Bio Technology</option>
+                                        <option value="Chemical"<?php if ($before->industryp == 'Chemical') echo ' selected="selected"'; ?>>Chemical</option>
+                                        <option value="Consulting"<?php if ($before->industryp == 'Consulting') echo ' selected="selected"'; ?>>Consulting</option>
+                                        <option value="Defense"<?php if ($before->industryp == 'Defense') echo ' selected="selected"'; ?>>Defense</option>
+                                        <option value="Education"<?php if ($before->industryp == 'Education') echo ' selected="selected"'; ?>>Education</option>
+                                        <option value="Eletronics"<?php if ($before->industryp == 'Eletronics') echo ' selected="selected"'; ?>>Eletronics</option>
+                                        <option value="Environment"<?php if ($before->industryp == 'Environment') echo ' selected="selected"'; ?>>Environment</option>
+                                        <option value="Energy"<?php if ($before->industryp == 'Energy') echo ' selected="selected"'; ?>>Energy</option>
+                                        <option value="Entertainement"<?php if ($before->industryp == 'Entertainement') echo ' selected="selected"'; ?>>Entertainement</option>
+                                        <option value="Financial Services"<?php if ($before->industryp == 'Financial Services') echo ' selected="selected"'; ?>>Financial Services</option>
+                                        <option value="Food"<?php if ($before->industryp == 'Food') echo ' selected="selected"'; ?>>Food</option>
+                                        <option value="Healthcare"<?php if ($before->industryp == 'Healthcare') echo ' selected="selected"'; ?>>Healthcare</option>
+                                        <option value="Internet"<?php if ($before->industryp == 'Internet') echo ' selected="selected"'; ?>>Internet</option>
+<!--
+                                        <option value="">Legal</option>
+                                        <option value="">Manufacturing</option>
+                                        <option value="">Music</option>
+                                        <option value="">News</option>
+                                        <option value="">Real Estate</option>
+                                        <option value="">Software</option>
+                                        <option value="">Sports</option>
+                                        <option value="">Transportation</option>
+-->
+                                        <option value="Others"<?php if ($before->industryp == 'Others') echo ' selected="selected"'; ?>>Others</option>
+
+
+                                    </select>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="propositions">What are your primary value propositions?</label>
+                                    <p class="grey">List up to three things that define or differentiate your organization. </p>
+                                    <textarea class=" form-control " name="propositions" rows="1" aria-required="true" maxlength="250" style="margin-bottom:7px;"><?php echo set_value(' propositions ',$before->propositions);?></textarea>
+                                    <textarea class=" form-control " name="propositions1" rows="1" aria-required="true" maxlength="250" style="margin-bottom:7px;"><?php echo set_value(' propositions1 ',$before->propositions1);?></textarea>
+                                    <textarea class=" form-control " name="propositions2" rows="1" aria-required="true" maxlength="250" style="margin-bottom:7px;"><?php echo set_value(' propositions2 ',$before->propositions2);?></textarea>
+                                </div>
+                                
+                                <div class=" form-group ">
+                                    <label class="control-label" for="itrends">What industry trends should our writers consider?</label>
+                                    <p class="grey">Provide some context for defining your point of view. </p>
+                                    <textarea class=" form-control " name="itrends" rows="3"><?php echo set_value(' itrends ',$before->itrends);?></textarea>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="mcompetitors">Who are your main competitors?</label>
+                                    <p class="grey">List up to three organizations that play in your sandbox. What are their strengths,weaknesses, etc.? </p>
+                                    <textarea class=" form-control " name="mcompetitors" rows="3"><?php echo set_value(' mcompetitors ',$before->mcompetitors);?></textarea>
+                                </div>
+                                
+                                <div class=" form-group ">
+                                    <label class="control-label" for="branding">Do you have branding guidelines we should follow?</label>
+                                    <p class="grey">Upload or provide links to any style guides or brand guidelines the creative team must adhere to. </p>
+                                    <textarea class=" form-control " name="branding" rows="3"><?php echo set_value(' branding ',$before->branding);?></textarea>
+                                </div>
+                                <div class="col-lg-12 fileupload fileupload-new" data-provides="fileupload"> Upload Design <span class="btn btn-primary btn-file custombtn"><span class="fileupload-new">BROWSE</span>
+                                    <input type="file" name="brandingfile" id="brandingfile" value="<?php echo set_value(' branding ',$before->brandingfile);?>" />
+                                    </span>
+                                </div>
+<!--
+                                <div class="form-group">
                                     <label class="col-sm-2 control-label" for="normal-field">Start Date</label>
                                     <div class="col-sm-4">
                                         <input type="date" id="normal-field" class="form-control" name="startdate" value='<?php echo set_value(' startdate ',$before->startdate);?>'>
@@ -808,7 +1018,6 @@
                                         <input type="date" id="normal-field" class="form-control" name="publishingdate" value='<?php echo set_value(' publishingdate ',$before->publishingdate);?>'>
                                     </div>
                                 </div>
-<!--
                                 <div class=" form-group">
                                     <label class="col-sm-2 control-label" for="normal-field">User</label>
                                     <div class="col-sm-4">
