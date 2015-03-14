@@ -452,7 +452,7 @@ class Site extends CI_Controller
             else
             $data["alertsuccess"]="Campaign created Successfully.";
             $data["redirect"]="site/viewcampaigngroupsbycampaign?id=$campaignid";
-            $this->load->view("redirect",$data);
+            $this->load->view("redirect2",$data);
         }
     }
     

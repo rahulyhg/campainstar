@@ -133,7 +133,7 @@ LEFT OUTER JOIN `user` as`tab2` ON `tab2`.`id`=`campaign_group`.`contentwriter`"
     }
     function getallgroupbycampaign($id)
     {
-        $query=$this->db->query("SELECT `campaign_group`.`name` as `name` ,`campaign_group`.`id` as `id` ")->result();
+        $query=$this->db->query("SELECT `campaign_group`.`name` as `name` ,`campaign_group`.`id` as `id` FROM `campaign_group` ")->result();
         return $query;
     }
     

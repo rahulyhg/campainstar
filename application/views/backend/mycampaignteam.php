@@ -50,8 +50,10 @@
                 </div>
                 <div class="campaignteambtn">
 
+<!--
                     <a href="#" class="btn btn-default">Give Feedback</a>
                     <a href="#" class="btn btn-primary">Approve</a>
+-->
 
                 </div>
                 <div class="clearfix"></div>
