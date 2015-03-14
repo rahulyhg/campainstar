@@ -269,6 +269,8 @@ class Site extends CI_Controller
 		$access = array("1","2","3");
 		$this->checkaccess($access);
             $data[ 'page' ] = 'resultsandanaltys';
+        $campaignid=$this->input->get_post("id");
+        $data['table']=$this->campaignaccess_model->getcampaignresults($campaignid);
            $data['title']='resultsandanaltys';
             $this->load->view('template',$data);
    }

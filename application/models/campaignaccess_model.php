@@ -317,5 +317,17 @@ LEFT OUTER JOIN `campaign_group` ON `campaign_campaigntest`.`group`=`campaign_gr
 WHERE `campaign_campaigntest`.`campaign`='$campaignid' LIMIT 0,2")->result();
         return $query;
     }
+    
+    function getcampaignresults($campaignid)
+    {
+        $tests=$this->db->query("SELECT * FROM `campaign_campaigntest`
+WHERE `campaign_campaigntest`.`campaign`='$campaignid' LIMIT 0,2")->result();
+        $result=$this->db->query("SELECT * FROM `campaign_campaignresult`
+WHERE `campaign_campaignresult`.`campaign`='$campaignid' LIMIT 0,2")->result();
+        $query=new stdClass();
+        $query->tests=$tests;
+        $query->result=$result;
+        return $query;
+    }
 }
 ?>

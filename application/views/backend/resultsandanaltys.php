@@ -1,7 +1,7 @@
 <div class="boxed">
 <div class="boxall">
                          
-                         
+                         <?php print_r($table);?>
                          
 								<!-- Circular Form Wizard -->
 								<!--===================================================-->
@@ -17,9 +17,11 @@
 					           </select>
 <p class="Results">Final Campaign Results</p>
 					           </div>
+<!--
 					           <div class="col-md-2 dwreports">
 					               <button class="reports"><span><img src="<?php echo base_url("assets");?>/bg-img/report.png" alt=""></span>Download</button>
 					           </div>
+-->
 					           </div>
 					                  	<div class="row">
 									    <div class="col-md-3 text-center">
