@@ -299,3 +299,11 @@ small.wz-desc.box-block {
     font-size: 14px;
     margin-bottom: 10px;
 }
+a.btn-campaign {
+    padding: 0 10px !important;
+    margin: 0 !important;
+    color: white !important;
+    font-weight: 600 !important;
+    display: inline-block !important;
+
+}

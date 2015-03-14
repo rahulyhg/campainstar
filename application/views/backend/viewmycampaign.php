@@ -58,9 +58,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6 text-xs-center text-right">
-                                    <div class="form-group">
-                                        <input id="demo-input-search2" type="text" placeholder="Search" class="form-control" autocomplete="off">
-                                    </div>
+                                   
                                 </div>
                             </div>
                         </div>

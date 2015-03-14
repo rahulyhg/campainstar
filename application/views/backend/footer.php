@@ -65,8 +65,8 @@
 											<!--<i class="arrow"></i>-->
 										</a>
 
-											<li class="pad-ver" style="background-color: rgb(236, 236, 236);"><!--<a href="#" class="btn btn-success btn-bock" id="add_button" style="color: white;">Start New Campaign</a>-->
-											<a href="<?php echo site_url("site/createcampaign");?>"><img src="<?php echo base_url('assets/img/submit_button.png'); ?>" id="add_button"/></a>
+											<li class="pad-ver text-center" style="background-color: rgb(236, 236, 236);"><!--<a href="#" class="btn btn-success btn-bock" id="add_button" style="color: white;">Start New Campaign</a>-->
+											<a href="<?php echo site_url("site/createcampaign");?>" class="btn btn-purple btn-labeled fa fa-plus btn-campaign">Start New Campaign</a>
 										
                                             </li>
 										</ul>
