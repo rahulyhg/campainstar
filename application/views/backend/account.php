@@ -1,7 +1,12 @@
 <div class="boxed">
     <div class="formbox">
-        <h3 class="started">Get started</h3>
-        <p class="account">ACCOUNT SETUP</p>
+       <div id="page-title">
+        <h1 class="page-header text-overflow">Get started</h1>
+        </div>
+        <ol class="breadcrumb">
+            <li><a href="#">Account Setup</a>
+            </li>
+        </ol>
         <div class="panel">
 
             <!-- Circular Form Wizard -->
