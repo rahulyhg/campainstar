@@ -66,13 +66,17 @@ class User extends CI_Controller
             $guidlinesfile=$uploaddata['file_name'];
 		}
             
-            
+        $campid=$this->user_model->createuser($fullname,$emailaddress,$choosepassword,$reenterpassword,$companyname,$companyurl,$industry,$emailsystem,$guidline,$emailsystem2,$brandguidlines,$companylogo,$guidlinesfile);
         
-        if($this->user_model->createuser($fullname,$emailaddress,$choosepassword,$reenterpassword,$companyname,$companyurl,$industry,$emailsystem,$guidline,$emailsystem2,$brandguidlines,$companylogo,$guidlinesfile)==0)
-        $data["alerterror"]="New User could not be created.";
+        if($campid==0)
+        {
+           $data["redirect"]="user/details";
+        }
         else
-        $data["alertsuccess"]="User created Successfully.";
-        $data["redirect"]="login/index";
+        {
+            $data["alertsuccess"]="User created Successfully.";
+            $data["redirect"]="site/createcampaign";
+        }
         $this->load->view("redirect",$data);
     }
     }

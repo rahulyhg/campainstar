@@ -90,7 +90,15 @@ class User_model extends CI_Model
             'accesslevel'=> 3
 		);
 		$query=$this->db->insert( 'user', $data );
-		$id=$this->db->insert_id();
+        $id=$this->db->insert_id();
+        $newdata        = array(
+				'id' => $id,
+				'email' => $emailaddress,
+				'name' => $this->fullname ,
+				'accesslevel' => 3 ,
+				'logged_in' => 'true',
+			);
+			$this->session->set_userdata( $newdata );
         
 		if(!$query)
 			return  0;
