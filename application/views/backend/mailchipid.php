@@ -11,12 +11,12 @@
                                        <form class="form-horizontal bg" action="<?php echo site_url('account/mailchipidsubmit');?>" method="post">
                                         <div class="formspac">
                                          <div class="form-group">
-														<label class="col-lg-3 control-label txt">Id
+														<label class="col-lg-3 control-label txt">MAil Chimp ID
 														
 														</label>
 														<div class="col-lg-7">
 															<input type="text" class="form-control txt" name="id"
-															 placeholder="Full Name">
+															 placeholder="">
 															
                                              </div>
                                             </div>

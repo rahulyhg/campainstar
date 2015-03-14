@@ -1,16 +1,14 @@
 <div class="boxed">
-    <div class="boxinner all-white">
-        <div class="col-sm-6 text-xs-center">
-            <div class="form-group">
-                <button id="demo-btn-addrow" class="btn btn-purple btn-labeled fa fa-plus"><a href="<?php echo site_url('account/viewmylistupload'); ?>">Add New List</a></button>
-            </div>
-        </div>
-        <div class="col-sm-6 text-xs-center text-right">
-            <div class="form-group">
-                <input id="demo-input-search2" type="text" placeholder="Search" class="form-control" autocomplete="off">
-            </div>
-        </div>
+    <div class="formbox w100 all-white">
+          <div id="page-title">
+					<h1 class="page-header text-overflow">My Campaigns</h1>
+
+				
+<ol class="breadcrumb">
+    <li><a href="#">Select List</a></li></ol>
         <div class="panel-body">
+          <a href="<?php echo site_url('account/viewmylistupload'); ?>" id="demo-btn-addrow" class="btn btn-purple btn-labeled fa fa-plus">Add New List</a>
+           <div class="padding"></div>
             <table id="demo-foo-row-toggler" class="table toggle-circle">
                 <thead>
                     <tr>

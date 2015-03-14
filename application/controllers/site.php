@@ -285,7 +285,7 @@ class Site extends CI_Controller
 		$this->checkaccess($access);
         $campaigngroupid=$this->input->get('campaigngroupid');
         $campaignid=$this->input->get('id');
-		$this->campaignaccess_model->changecampaigngroupstatustoactive($this->input->get('campaigngroupid'),$campaignid);
+		$this->campaignaccess_model->changecampaigngroupstatustoactive($campaigngroupid,$campaignid);
 //        $data["redirect"]="site/viewcampaigngroup?id=".$campaignid;
         $data["redirect"]="site/viewcampaigngroupsbycampaign?id=".$campaignid;
         $this->load->view("redirect2",$data);
@@ -447,6 +447,7 @@ class Site extends CI_Controller
 //        $data["page"]="viewcampaigngroupsbycampaign";
         $data["page"]="selectteama";
         $campaignid=$this->input->get('id');
+        $data['campaignid']=$campaignid;
         $data['before']=$this->campaignaccess_model->beforeedit($campaignid);
         $data['table'] = $this->campaignaccess_model->getallgroupbycampaign($campaignid);
        // $data['selectedgroup']=$this->campaignaccess_model->getselectedcampaigngroupbycampaign($campaignid);

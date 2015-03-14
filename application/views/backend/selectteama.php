@@ -25,7 +25,7 @@
                                                     <p class="text-muted mar-btm"></p>
 
                                                     <div class="pad-ver">
-                                                      <a class="btn btn-primary"  href="<?php echo site_url('site/changecampaigngroupstatustoactive?campaigngroupid='.$row->id."&id=".$row->campaign); ?>">Select </a>
+                                                      <a class="btn btn-primary"  href="<?php echo site_url('site/changecampaigngroupstatustoactive?campaigngroupid='.$row->id."&id=".$campaignid); ?>">Select </a>
 
                                                     </div>
                                                 </div>
