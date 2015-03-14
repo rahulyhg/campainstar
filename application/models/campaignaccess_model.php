@@ -76,7 +76,7 @@ class campaignaccess_model extends CI_Model
     }
     function getcampaignbyuser($id)
     {
-        $query=$this->db->query("SELECT * FROM `campaign_campaign` WHERE `user`='$id'")->result();
+        $query=$this->db->query("SELECT * FROM `campaign_campaign` LEFT OUTER JOIN `campaign_campaignresult` ON `campaign_campaign`.`id`=`campaign_campaignresult`.`campaign` WHERE `user`='$id'")->result();
         return $query;
     }
     public function edit($id,$Name,$emailused,$question,$deadline,$goals,$audience,$callactivate,$reqelem,$keywords,$specific,$outline,$avoid,$material,$instructions,$uorganization,$industryp,$propositions,$propositions1,$propositions2,$itrends,$mcompetitors,$branding,$specificfile,$outlinefile,$materialfile,$brandingfile,$user)
