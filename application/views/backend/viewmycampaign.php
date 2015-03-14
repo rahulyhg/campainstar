@@ -826,6 +826,9 @@
                                             <a href="<?php echo site_url('site/viewcampaigngroupsbycampaign?id=').$row->id;?>" class="btn btn-primary btn-s">
                                                 <i class="icon-pencil"></i>
                                             </a>
+                                            <a href="<?php echo site_url('site/viewmycampaignteam?id=').$row->id;?>" class="btn btn-primary btn-s">
+                                                <i class="icon-pencil"></i>
+                                            </a>
                                         </td>
 										<td>
 										<a href="<?php echo site_url('site/editcampaignbyuser?id=').$row->id;?>" class="btn btn-primary btn-s">

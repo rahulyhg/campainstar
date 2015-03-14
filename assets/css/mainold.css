@@ -1,41 +1,13 @@
-@font-face{
-font-family:'Gotham';
- src:url(GOTHAM-ROUNDED-MEDIUM.TTF);
- font-weight:500;
-}
-@font-face {
-    font-family: 'Museo';
-    src: url(Museo_700.otf);
-    font-weight: 700;
-}
-@font-face {
-    font-family: 'Museo';
-    src: url(Museo_500.otf);
-    font-weight: 500;
-}
-@font-face {
-    font-family: 'Museo';
-    src: url(Museo_300.otf);
-    font-weight: normal;
-}
 body {
     background-color: #ECECEC;
-    font-family:Gotham;
-    font-weight: 500;
 }
 .Results {
-    padding: 20px 0px 20px 0px;
+    padding: 15px 0px 0px 0px;
 }
 .boxinner {
     padding-top: 50px;
     padding-left: 240px;
     width: 100%;
-    padding-right: 20px;
-}
-.formbox{
-    width:60%;
-     padding-top: 50px;
-    padding-left: 240px;
     padding-right: 20px;
 }
 .formspac {
@@ -100,24 +72,23 @@ label.col-lg-3.control-label.txt {
     background: #DFDFDF;
     text-align: right;
 }
-.back {
+a.back {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
     color: white;
-    background: #bbbbbb;
+    background: #aaa;
     padding: 10px 20px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    border-bottom-color:#888888;
     border-bottom-width: 3px;
 }
-.back+.continue {
+a.back+button.continue {
     margin: 0 15px;
 }
-.continue {
+button.continue {
     color: white;
     background: #3790DF;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -127,10 +98,6 @@ label.col-lg-3.control-label.txt {
     -moz-border-radius: 4px;
     border-radius: 4px;
     border-bottom-width: 3px;
-}
-.select_menu{
-    width: 100%;
-  padding: 10px;
 }
 form.form-horizontal.bg {
     background: white;
@@ -142,7 +109,7 @@ input.form-control.txt {
     vertical-align: middle;
 }
 h3.started {
-    color: #999999;
+    color: #323232;
     font-weight: 400;
 }
 p.account {
@@ -176,8 +143,8 @@ select.newletter {
     height: 30px;
 }
 p.Results {
-   
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 13px;
     color: #afafaf;
 }
 .txtalign {
@@ -218,15 +185,14 @@ p.Results {
 .panel.panel-danger.panel-colorful.pinktxt {
     background: #ed213c;
 }
-
+/*--------Sapana--------*/
 
 button.btn.btn-primary {
-    padding: 6px 12px;
+    padding: 6px;
     background-color: #06d281;
     border-color: #06d281;
 }
 button.btn.btn-success {
-    padding: 6px 12px;
     background-color: #4c0066;
     border-color: #4c0066;
 }
@@ -270,31 +236,4 @@ border-bottom: 2px solid #E2E2E2;
 li.pad-ver {
   border-bottom: 2px solid #E2E2E2;
 border-top: 2px solid #E2E2E2;
-}
-.widget-body.newbody.text-center {
-    padding: 40px 15px 15px;
-}
-.mt10{
-    margin-top:10px;
-}
-.pad-ver-new {
-    padding: 5px 0px;
-}
-.title_name{
-    color:#999999;
-}
-.team_info{
-    color:#bbbbbb;
-}
-.bg_yellow{
-    background-color: #ffd24d;
-}
-.hd_bgcolor{
-    background-color: #22223c;
-}
-.hd_bgcolor a{
-    color:#ffd24d!important;
-}
-small.wz-desc.box-block {
-    opacity: 1;
 }

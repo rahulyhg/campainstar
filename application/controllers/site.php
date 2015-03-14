@@ -237,7 +237,8 @@ class Site extends CI_Controller
     {
         $access=array("3");
         $this->checkaccess($access);
-        $data["page"]="viewcampaigngroupsbycampaign";
+//        $data["page"]="viewcampaigngroupsbycampaign";
+        $data["page"]="selectteama";
         $campaignid=$this->input->get('id');
         $data['before']=$this->campaignaccess_model->beforeedit($campaignid);
         $data['table'] = $this->campaignaccess_model->getallgroupbycampaign($campaignid);
