@@ -9,15 +9,6 @@
         <div id="page-title">
             <h1 class="page-header text-overflow">My Campaign</h1>
 
-            <!--Searchbox-->
-            <div class="searchbox">
-                <div class="input-group custom-search-form">
-                    <input type="text" class="form-control" placeholder="Search..">
-                    <span class="input-group-btn">
-								<button class="text-muted" type="button"><i class="fa fa-search"></i></button>
-							</span>
-                </div>
-            </div>
         </div>
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <!--End page title-->
@@ -39,7 +30,7 @@
                 <!-- Foo Table - Add & Remove Rows -->
                 <!--===================================================-->
                 <div class="panel-body">
-                 
+                 <a href="http://localhost/campainstar/index.php/site/createcampaign" class="btn btn-purple btn-labeled fa fa-plus btn-campaign" style="margin-bottom: 20px !important;">New Campaign</a>
                    <table id="demo-foo-addrow" class="table table-bordered footable footable-loaded table-hover toggle-circle" data-filter="#filter" data-page-size="7">
 								<thead>
 									<tr>
