@@ -246,6 +246,8 @@ class Site extends CI_Controller
 	{
 		$access = array("1","2","3");
 		$this->checkaccess($access);
+        $campaignid=$this->input->get('id');
+        $data['table']=$this->campaignaccess_model->getcampaigntestbycampaignid($campaignid);
             $data[ 'page' ] = 'mycampaignteam';
            $data['title']='mycampaignteam';
             $this->load->view('template',$data);
@@ -501,6 +503,6 @@ class Site extends CI_Controller
         }
     }
     
-    
+
 }
 ?>

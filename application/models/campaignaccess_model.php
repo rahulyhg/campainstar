@@ -309,5 +309,13 @@ WHERE `campaign_campaignresult`. `campaign`='$id'")->row();
 		return $query;
 	}
     
+    function getcampaigntestbycampaignid($campaignid)
+    {
+        $query=$this->db->query("SELECT `campaign_campaigntest`.`id`, `campaign_campaigntest`.`campaign`, `campaign_campaigntest`.`Timestamp`, `campaign_campaigntest`.`group`, `campaign_campaigntest`.`reports`, `campaign_campaigntest`.`image` , `campaign_campaigntest`.`mobileimage`, `campaign_campaigntest`.`htmlcontent` ,`campaign_group`.`name` as `groupname`
+FROM `campaign_campaigntest` 
+LEFT OUTER JOIN `campaign_group` ON `campaign_campaigntest`.`group`=`campaign_group`.`id`
+WHERE `campaign_campaigntest`.`campaign`='$campaignid' LIMIT 0,2")->result();
+        return $query;
+    }
 }
 ?>
