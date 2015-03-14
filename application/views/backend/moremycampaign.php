@@ -26,11 +26,11 @@
                   <span class="bold">Team B:</span> Jim &amp; Jack
               </div>
               
-               <a id="demo-btn-addrow" class="btn btn-purple btn-labeled fa fa-edit">Edit Campaign Brief</a>
+               <a id="demo-btn-addrow" class="btn btn-purple btn-labeled fa fa-edit" href="<?php echo site_url("site/editcampaignbyuser?id=").$campaignid;?>">Edit Campaign Brief</a>
                &nbsp;
-               <a id="demo-btn-addrow" class="btn btn-purple btn-labeled fa fa-eye">Preview &amp; Approve</a>
+               <a href="<?php echo site_url("site/previewcampaign?id=").$campaignid;?>" id="demo-btn-addrow" class="btn btn-purple btn-labeled fa fa-eye">Preview &amp; Approve</a>
                &nbsp;
-               <a id="demo-btn-addrow" class="btn btn-default btn-labeled fa fa-bar-chart">Campaign Analysis</a>
+               <a href="<?php echo site_url("site/resultsandanaltys?id=").$campaignid;?>" id="demo-btn-addrow" class="btn btn-purple btn-labeled fa fa-bar-chart">Campaign Analysis</a>
                
                 </div>
             </div>
