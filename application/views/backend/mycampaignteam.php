@@ -23,8 +23,10 @@
                             <ul class="nav nav-tabs">
                                 <li class="active"><a href="#demo-tabs-box-1" data-toggle="tab">Preview</a>
                                 </li>
+<!--
                                 <li><a href="#demo-tabs-box-2" data-toggle="tab">HTML</a>
                                 </li>
+-->
                             </ul>
                         </div>
                         <h3 class="panel-title panel-title2"><?php echo $row->groupname;?></h3>
