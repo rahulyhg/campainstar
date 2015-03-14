@@ -2,22 +2,13 @@
 
     <!--CONTENT CONTAINER-->
     <!--===================================================-->
-    <div id="content-container">
+    <div class="formbox w100">
 
         <!--Page Title-->
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <div id="page-title">
             <h1 class="page-header text-overflow">My Campaign</h1>
 
-            <!--Searchbox-->
-            <div class="searchbox">
-                <div class="input-group custom-search-form">
-                    <input type="text" class="form-control" placeholder="Search..">
-                    <span class="input-group-btn">
-								<button class="text-muted" type="button"><i class="fa fa-search"></i></button>
-							</span>
-                </div>
-            </div>
         </div>
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <!--End page title-->
@@ -39,158 +30,46 @@
                 <!-- Foo Table - Add & Remove Rows -->
                 <!--===================================================-->
                 <div class="panel-body">
-                    <table id="demo-foo-addrow" class="table table-bordered table-hover toggle-circle" data-page-size="7">
-                        <thead>
-                            <tr>
-                                <th data-sort-ignore="true" class="min-width"></th>
-                                <th data-sort-initial="true" data-toggle="true">First Name</th>
-                                <th>Last Name</th>
-                                <th data-hide="phone, tablet">Job Title</th>
-                                <th data-hide="phone, tablet">DOB</th>
-                                <th data-hide="phone, tablet">Status</th>
-                            </tr>
-                        </thead>
-                        <div class="pad-btm form-inline">
-                            <div class="row">
-                                <div class="col-sm-6 text-xs-center">
-                                    <div class="form-group">
-                                        <button id="demo-btn-addrow" class="btn btn-purple btn-labeled fa fa-plus">Add New Row</button>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 text-xs-center text-right">
-                                    <div class="form-group">
-                                        <input id="demo-input-search2" type="text" placeholder="Search" class="form-control" autocomplete="off">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <button class="demo-delete-row btn btn-danger btn-xs btn-icon fa fa-times"></button>
-                                </td>
-                                <td>Isidra</td>
-                                <td>Boudreaux</td>
-                                <td>Traffic Court Referee</td>
-                                <td>22 Jun 1972</td>
-                                <td><span class="label label-table label-success">Active</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button class="demo-delete-row btn btn-danger btn-xs btn-icon fa fa-times"></button>
-                                </td>
-                                <td>Shona</td>
-                                <td>Woldt</td>
-                                <td>Airline Transport Pilot</td>
-                                <td>3 Oct 1981</td>
-                                <td><span class="label label-table label-dark">Disabled</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button class="demo-delete-row btn btn-danger btn-xs btn-icon fa fa-times"></button>
-                                </td>
-                                <td>Granville</td>
-                                <td>Leonardo</td>
-                                <td>Business Services Sales Representative</td>
-                                <td>19 Apr 1969</td>
-                                <td><span class="label label-table label-danger">Suspended</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button class="demo-delete-row btn btn-danger btn-xs btn-icon fa fa-times"></button>
-                                </td>
-                                <td>Easer</td>
-                                <td>Dragoo</td>
-                                <td>Drywall Stripper</td>
-                                <td>13 Dec 1977</td>
-                                <td><span class="label label-table label-success">Active</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button class="demo-delete-row btn btn-danger btn-xs btn-icon fa fa-times"></button>
-                                </td>
-                                <td>Maple</td>
-                                <td>Halladay</td>
-                                <td>Aviation Tactical Readiness Officer</td>
-                                <td>30 Dec 1991</td>
-                                <td><span class="label label-table label-danger">Suspended</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button class="demo-delete-row btn btn-danger btn-xs btn-icon fa fa-times"></button>
-                                </td>
-                                <td>Maxine</td>
-                                <td><a href="#">Woldt</a>
-                                </td>
-                                <td><a href="#">Business Services Sales Representative</a>
-                                </td>
-                                <td>17 Oct 1987</td>
-                                <td><span class="label label-table label-dark">Disabled</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button class="demo-delete-row btn btn-danger btn-xs btn-icon fa fa-times"></button>
-                                </td>
-                                <td>Lorraine</td>
-                                <td>Mcgaughy</td>
-                                <td>Hemodialysis Technician</td>
-                                <td>11 Nov 1983</td>
-                                <td><span class="label label-table label-dark">Disabled</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button class="demo-delete-row btn btn-danger btn-xs btn-icon fa fa-times"></button>
-                                </td>
-                                <td>Lizzee</td>
-                                <td><a href="#">Goodlow</a>
-                                </td>
-                                <td>Technical Services Librarian</td>
-                                <td>1 Nov 1961</td>
-                                <td><span class="label label-table label-danger">Suspended</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button class="demo-delete-row btn btn-danger btn-xs btn-icon fa fa-times"></button>
-                                </td>
-                                <td>Judi</td>
-                                <td>Badgett</td>
-                                <td>Electrical Lineworker</td>
-                                <td>23 Jun 1981</td>
-                                <td><span class="label label-table label-success">Active</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button class="demo-delete-row btn btn-danger btn-xs btn-icon fa fa-times"></button>
-                                </td>
-                                <td>Lauri</td>
-                                <td>Hyland</td>
-                                <td>Blackjack Supervisor</td>
-                                <td>15 Nov 1985</td>
-                                <td><span class="label label-table label-danger">Suspended</span>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td colspan="6">
-                                    <div class="text-right">
-                                        <ul class="pagination"></ul>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tfoot>
-                    </table>
-
-
+                 <a href="http://localhost/campainstar/index.php/site/createcampaign" class="btn btn-purple btn-labeled fa fa-plus btn-campaign" style="margin-bottom: 20px !important;">New Campaign</a>
+                   <table id="demo-foo-addrow" class="table table-bordered footable footable-loaded table-hover toggle-circle" data-filter="#filter" data-page-size="7">
+								<thead>
+									<tr>
+										<th data-sort-initial="true" data-toggle="true">Campaign Name</th>
+										<th>Opens</th>
+										<th data-hide="phone, tablet">Clicks</th>
+										<th data-hide="phone, tablet">Date</th>
+										<th data-hide="phone, tablet">Status</th>
+										<th data-hide="phone, tablet" style="width:50px;">Action</th>
+									</tr>
+								</thead>
+								
+								<tbody>
+								<?php foreach($table as $row) {
+                                    $row->reports=json_decode($row->reports);
+                                    ?>
+									<tr>
+										<td><?php echo $row->Name; ?></td>
+										<td><?php echo $row->reports[0]->value;?> </td>
+										<td><?php echo $row->reports[1]->value;?> </td>
+										<td><?php echo $row->startdate;?></td>
+										<td><span class="label label-table label-success">Active</span></td>
+										<td>
+										<a href="<?php echo site_url("site/moremycampaign?id=").$row->id;?>" class="btn btn-primary">View</a>
+<!--										<a href="<?php echo site_url("site/deletecampaignbyuser?id=").$row->id;?>" class="btn btn-danger">Delete</a></td>-->
+									</tr>
+									<?php } ?>
+									
+								</tbody>
+								<tfoot>
+									<tr>
+										<td colspan="6">
+											<div class="text-right">
+												<ul class="pagination"></ul>
+											</div>
+										</td>
+									</tr>
+								</tfoot>
+							</table>
 
                 </div>
                 <!--===================================================-->

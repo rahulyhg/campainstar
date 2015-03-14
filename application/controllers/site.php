@@ -67,6 +67,19 @@ class Site extends CI_Controller
         $this->load->view('template',$data);
             
 	}
+	public function moremycampaign()
+	{
+		$access = array("1","2","3");
+		$this->checkaccess($access);
+        $data[ 'page' ] = 'moremycampaign';
+        $campaign= $this->input->get_post("id");
+        $data['campaignid']= $this->input->get_post("id");
+        $userid=$this->session->userdata('id');
+        $data['campaign'] = $this->campaignaccess_model->getcampaignbyuser($userid);
+        $data['title']='My Campaigns';
+        $this->load->view('template',$data);
+            
+	}
 	public function editcampaignbyuser()
 	{
 		$access = array("1","2","3");
@@ -226,6 +239,26 @@ class Site extends CI_Controller
             $this->load->view("redirect",$data);
         }
     }
+    
+    
+    public function previewcampaign()
+	{
+		$access = array("1","2","3");
+		$this->checkaccess($access);
+            $data[ 'page' ] = 'mycampaignteam';
+           $data['title']='mycampaignteam';
+            $this->load->view('template',$data);
+   }
+    
+    public function resultsandanaltys()
+	{
+		$access = array("1","2","3");
+		$this->checkaccess($access);
+            $data[ 'page' ] = 'resultsandanaltys';
+           $data['title']='resultsandanaltys';
+            $this->load->view('template',$data);
+   }
+    
     
 	public function viewcampaigngroup()
 	{
@@ -465,5 +498,7 @@ class Site extends CI_Controller
         $this->load->view("redirect2",$data);
         }
     }
+    
+    
 }
 ?>

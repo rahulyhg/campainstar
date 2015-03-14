@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
-body {
+ body {
     background-color: #ECECEC;
     font-weight: 500;
 }
@@ -197,16 +197,6 @@ p.Results {
 .panel.panel-danger.panel-colorful.pinktxt {
     background: #ed213c;
 }
-button.btn.btn-primary {
-    padding: 6px 12px;
-    background-color: #06d281;
-    border-color: #06d281;
-}
-button.btn.btn-success {
-    padding: 6px 12px;
-    background-color: #4c0066;
-    border-color: #4c0066;
-}
 .widget-header.bg-primary1 {
     background-color: #dd705e;
 }
@@ -267,7 +257,7 @@ li.pad-ver {
     background-color: #ffd24d;
 }
 .hd_bgcolor {
-    background-color: #22223c;
+    background-color: #1C1C5A;
 }
 .hd_bgcolor a {
     color: #ffd24d!important;
@@ -278,3 +268,39 @@ small.wz-desc.box-block {
 .grey {
     color: #bbbbbb;
 }
+.no-margin .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+.w100 {
+    width: 100%;
+}
+.w100 .page-header {
+    color: #454545;
+}
+.w100 .breadcrumb li,
+.w100 .breadcrumb li a {
+    color: #454545;
+}
+.formbox .page-header {
+    color: #454545;
+}
+.formbox .breadcrumb li,
+.formbox .breadcrumb li a {
+    color: #454545;
+}
+.bold {
+    font-weight: 600;
+}
+.content1 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+a.btn-campaign {
+    padding: 0 10px !important;
+    margin: 0 !important;
+    color: white !important;
+    font-weight: 600 !important;
+    display: inline-block !important;
+}
+.breadcrumb {padding: 0 !important;}

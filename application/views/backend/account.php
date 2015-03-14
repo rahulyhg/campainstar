@@ -1,7 +1,12 @@
 <div class="boxed">
     <div class="formbox">
-        <h3 class="started">Get started</h3>
-        <p class="account">ACCOUNT SETUP</p>
+       <div id="page-title">
+        <h1 class="page-header text-overflow">Get started</h1>
+        </div>
+        <ol class="breadcrumb">
+            <li><a href="#">Account Setup</a>
+            </li>
+        </ol>
         <div class="panel">
 
             <!-- Circular Form Wizard -->
@@ -62,11 +67,14 @@
 
                             <!--First tab-->
                             <div id="demo-step-tab1" class="tab-pane">
-                                <div class="form-group">
-                                    <label class="col-lg-3 control-label txt">Full Name</label>
-                                    <div class="col-lg-7">
-                                        <input type="text" class="form-control txt" name="fullname" placeholder="">
+                               <div class="no-margin">
+                                     <div class="form-group">
+                                        <label class="col-lg-3 control-label txt">Full Name</label>
+                                        <div class="col-lg-7">
+                                            <input type="text" class="form-control txt" name="fullname" placeholder="">
+                                        </div>
                                     </div>
+<<<<<<< HEAD
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label txt">Email Addresss</label>
@@ -78,12 +86,25 @@
                                     <label class="col-lg-3 control-label txt">Enter Password</label>
                                     <div class="col-lg-7">
                                         <input type="password" class="form-control txt" name="choosepassword" placeholder="">
+=======
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label txt">Email Addresss</label>
+                                        <div class="col-lg-7">
+                                            <input type="text" class="form-control txt" name="emailaddresss" placeholder="">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-lg-3 control-label txt">Re Enter Password</label>
-                                    <div class="col-lg-7">
-                                        <input type="password" class="form-control txt" name="reenterpassword" placeholder="">
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label txt">Choose Password</label>
+                                        <div class="col-lg-7">
+                                            <input type="password" class="form-control txt" name="choosepassword" placeholder="">
+                                        </div>
+>>>>>>> origin/master
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label txt">Re Enter Password</label>
+                                        <div class="col-lg-7">
+                                            <input type="password" class="form-control txt" name="reenterpassword" placeholder="">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
