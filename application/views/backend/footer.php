@@ -13,15 +13,7 @@
 									<!--<li class="list-header">Navigation</li>
 						
 									<!--Menu list item-->
-									<li class="active-link">
-										<a href="<?php echo site_url("site/index");?>">
-											<img src="<?php echo base_url('assets/img/icons/dash_icon.png'); ?>"/>
-											<span class="menu-title">
-												<strong>Dashboard</strong>
-												<!--<span class="label label-success pull-right">Top</span>-->
-											</span>
-										</a>
-									</li>
+									
 						
 									<!--Menu list item-->
 									<li>
@@ -34,7 +26,7 @@
 											<!--<i class="arrow"></i>-->
 										</a>
                                         <li>
-										<a href="#">
+										<a href="<?php echo site_url("account/viewmylist");?>">
 											<img src="<?php echo base_url('assets/img/icons/list_icon.png'); ?>"/>
 											<span class="menu-title">
 												<strong>My Lists</strong>
@@ -50,14 +42,14 @@
 											<!--<i class="arrow"></i>-->
 										</a>
                                         <li>
-										<a href="#">
+										<a href="<?php echo site_url("site/resultsandanaltys");?>">
 											<img src="<?php echo base_url('assets/img/icons/reports_icn.png'); ?>"/>
 											<span class="menu-title">
 												<strong>Reports & Analytic</strong>
 											</span>
 											<!--<i class="arrow"></i>-->
 										</a>
-						<a href="#">
+						<a href="<?php echo site_url("account/mailchipid");?>">
 											<img src="<?php echo base_url('assets/img/icons/integr_icon.png'); ?>"/>
 											<span class="menu-title">
 												<strong>Intergrations</strong>

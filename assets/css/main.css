@@ -190,12 +190,16 @@ p.Results {
 }
 .panel.panel-danger.panel-colorful.bluetxt {
     background: #4c0066;
+    height: 176px;
 }
 .panel.panel-danger.panel-colorful.yellowtxt {
     background: #ffd24d;
+    height: 176px;
+    /* height: 176px; */
 }
 .panel.panel-danger.panel-colorful.pinktxt {
     background: #ed213c;
+    height: 176px;
 }
 .widget-header.bg-primary1 {
     background-color: #FFD24D;

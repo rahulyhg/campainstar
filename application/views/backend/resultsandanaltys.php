@@ -193,8 +193,17 @@ if($test1[0]->value < $test2[0]->value)
 
 <script>
 $(document).ready(function() {
+    console.log(<?php echo $campaignid;?>);
+    $(".allcampaigns").val(<?php echo $campaignid;?>);
     
+    
+    $(".allcampaigns").change(function() {
+        var myval=$(this).val();
+        window.location.href="<?php echo site_url("site/resultsandanaltys?id=");?>"+myval;
+    });
 });
+    
+    
     </script>
 <!--===================================================-->
 <!--END CONTENT CONTAINER-->
