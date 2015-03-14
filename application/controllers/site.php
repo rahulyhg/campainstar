@@ -449,7 +449,7 @@ class Site extends CI_Controller
         $campaignid=$this->input->get('id');
         $data['before']=$this->campaignaccess_model->beforeedit($campaignid);
         $data['table'] = $this->campaignaccess_model->getallgroupbycampaign($campaignid);
-        $data['selectedgroup']=$this->campaignaccess_model->getselectedcampaigngroupbycampaign($campaignid);
+       // $data['selectedgroup']=$this->campaignaccess_model->getselectedcampaigngroupbycampaign($campaignid);
 //        print_r($data["base_url"]);
         $data["title"]="View Groups";
         $this->load->view("template",$data);

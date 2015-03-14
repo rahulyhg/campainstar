@@ -30,7 +30,7 @@
                 <!-- Foo Table - Add & Remove Rows -->
                 <!--===================================================-->
                 <div class="panel-body">
-                 <a href="http://localhost/campainstar/index.php/site/createcampaign" class="btn btn-purple btn-labeled fa fa-plus btn-campaign" style="margin-bottom: 20px !important;">New Campaign</a>
+                 <a href="<?php echo site_url("site/createcampaign") ?>" class="btn btn-purple btn-labeled fa fa-plus btn-campaign" style="margin-bottom: 20px !important;">New Campaign</a>
                    <table id="demo-foo-addrow" class="table table-bordered footable footable-loaded table-hover toggle-circle" data-filter="#filter" data-page-size="7">
 								<thead>
 									<tr>

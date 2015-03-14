@@ -25,29 +25,8 @@
                                                     <p class="text-muted mar-btm"></p>
 
                                                     <div class="pad-ver">
-                                                       <?php 
-                                                        if($row->status==1)
-                                                        {
-                                                        ?>
-                                                    <a class="btn btn-primary"  href="<?php echo site_url('site/changecampaigngroupstatustoreject?campaigngroupid='.$row->id."&id=".$row->campaign); ?>">Desselect </a>
-                                                    <?php 
-                                                        }
-                                                        else if($row->status==2)
-                                                        {
-                                                            ?>
-                                                        <a class="btn btn-primary"  href="<?php echo site_url('site/changecampaigngroupstatustoactive?campaigngroupid='.$row->id."&id=".$row->campaign); ?>">Select </a>
-                                                        <?php
-                                                        }
-                                                        else
-                                                        {
-                                                        ?>
-                                                        <a class="btn btn-primary"  href="<?php echo site_url('site/changecampaigngroupstatustoactive?campaigngroupid='.$row->id."&id=".$row->campaign); ?>">Select </a>
-                                                        <a class="btn btn-primary"  href="<?php echo site_url('site/changecampaigngroupstatustoreject?campaigngroupid='.$row->id."&id=".$row->campaign); ?>">Disselect </a>
-                                                        <?php 
-                                                        } 
-                                                        ?>
-<!--                                                        <button class="btn btn-primary">Select</button>-->
-                                                        <button class="btn btn-success">View Profile</button>
+                                                      <a class="btn btn-primary"  href="<?php echo site_url('site/changecampaigngroupstatustoactive?campaigngroupid='.$row->id."&id=".$row->campaign); ?>">Select </a>
+
                                                     </div>
                                                 </div>
                                             </div>
