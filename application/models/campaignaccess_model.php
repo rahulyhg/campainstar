@@ -42,7 +42,7 @@ class campaignaccess_model extends CI_Model
         if(!$query)
             return  0;
         else
-            return  1;
+            return  $id;
     }
     
 //    public function create($Name,$startdate,$testdate,$publishingdate,$user)

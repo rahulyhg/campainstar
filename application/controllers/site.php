@@ -430,12 +430,12 @@ class Site extends CI_Controller
 				$brandingfile=$uploaddata['file_name'];
 			}
             
-            
-            if($this->campaignaccess_model->create($Name,$emailused,$question,$deadline,$goals,$audience,$callactivate,$reqelem,$keywords,$specific,$outline,$avoid,$material,$instructions,$uorganization,$industryp,$propositions,$propositions1,$propositions2,$itrends,$mcompetitors,$branding,$specificfile,$outlinefile,$materialfile,$brandingfile,$user)==0)
+            $campaignid=$this->campaignaccess_model->create($Name,$emailused,$question,$deadline,$goals,$audience,$callactivate,$reqelem,$keywords,$specific,$outline,$avoid,$material,$instructions,$uorganization,$industryp,$propositions,$propositions1,$propositions2,$itrends,$mcompetitors,$branding,$specificfile,$outlinefile,$materialfile,$brandingfile,$user);
+            if($campaignid==0)
             $data["alerterror"]="New Campaign could not be created.";
             else
             $data["alertsuccess"]="Campaign created Successfully.";
-            $data["redirect"]="site/viewmycampaign";
+            $data["redirect"]="site/viewcampaigngroupsbycampaign?id=$campaignid";
             $this->load->view("redirect",$data);
         }
     }
