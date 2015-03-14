@@ -197,16 +197,6 @@ p.Results {
 .panel.panel-danger.panel-colorful.pinktxt {
     background: #ed213c;
 }
-button.btn.btn-primary {
-    padding: 6px 12px;
-    background-color: #06d281;
-    border-color: #06d281;
-}
-button.btn.btn-success {
-    padding: 6px 12px;
-    background-color: #4c0066;
-    border-color: #4c0066;
-}
 .widget-header.bg-primary1 {
     background-color: #dd705e;
 }
@@ -313,3 +303,4 @@ a.btn-campaign {
     font-weight: 600 !important;
     display: inline-block !important;
 }
+.breadcrumb {padding: 0 !important;}
