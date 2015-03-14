@@ -1,20 +1,19 @@
+<!--===================================================-->
+<!--END NAVBAR-->
 
-		<!--===================================================-->
-		<!--END NAVBAR-->
+<div class="boxed">
 
-		<div class="boxed">
+    <!--CONTENT CONTAINER-->
+    <!--===================================================-->
+    <div id="content-container">
 
-			<!--CONTENT CONTAINER-->
-			<!--===================================================-->
-			<div id="content-container">
-				
-				<!--Page Title-->
-				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-				<div id="page-title">
-					<h1 class="page-header text-overflow">Create Campaign</h1>
+        <!--Page Title-->
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div id="page-title">
+            <h1 class="page-header text-overflow">Create Campaign</h1>
 
-					<!--Searchbox-->
-					<!--<div class="searchbox">
+            <!--Searchbox-->
+            <!--<div class="searchbox">
 						<div class="input-group custom-search-form">
 							<input type="text" class="form-control" placeholder="Search..">
 							<span class="input-group-btn">
@@ -24,15 +23,16 @@
 					</div>
 				</div>
 				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-				<!--End page title-->
-<ol class="breadcrumb">
-					<li><a href="#">Home</a></li>
-				<!--Page content-->
-				<!--===================================================-->
-				<div id="page-content">
-					
-					
-					<!--<div class="row">
+            <!--End page title-->
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a>
+                </li>
+                <!--Page content-->
+                <!--===================================================-->
+                <div id="page-content">
+
+
+                    <!--<div class="row">
 						<div class="col-sm-6">
 							<div class="panel">
 								<div class="panel-heading">
@@ -40,8 +40,8 @@
 								</div>
 					
 								<!-- Foo Table - Row Toggler -->
-								<!--===================================================-->
-								<!--<div class="panel-body">
+                    <!--===================================================-->
+                    <!--<div class="panel-body">
 									<table id="demo-foo-row-toggler" class="table toggle-circle">
 										<thead>
 											<tr>
@@ -127,17 +127,17 @@
 									</table>
 								</div>
 								<!--===================================================-->
-								<!-- End Foo Table - Row Toggler -->
-					
-						<!--	</div>
+                    <!-- End Foo Table - Row Toggler -->
+
+                    <!--	</div>
 							<div class="panel">
 								<div class="panel-heading">
 									<h3 class="panel-title">Accordion</h3>
 								</div>
 					
 								<!-- Foo Table - Accordion -->
-								<!--===================================================-->
-								<!--<div class="panel-body">
+                    <!--===================================================-->
+                    <!--<div class="panel-body">
 									<table id="demo-foo-accordion" class="table toggle-arrow-tiny">
 										<thead>
 											<tr>
@@ -223,9 +223,9 @@
 									</table>
 								</div>
 								<!--===================================================-->
-								<!-- End Foo Table - Accordion -->
-					
-							<!--</div>
+                    <!-- End Foo Table - Accordion -->
+
+                    <!--</div>
 						</div>
 						<div class="col-sm-6">
 							<div class="panel">
@@ -234,8 +234,8 @@
 								</div>
 					
 								<!-- Foo Table - Expand / Collapse All Rows -->
-								<!--===================================================-->
-								<!--<div class="panel-body">
+                    <!--===================================================-->
+                    <!--<div class="panel-body">
 									<div class="pad-btm">
 										<button id="demo-foo-collapse" class="btn btn-info">Collapse All</button>
 										<button id="demo-foo-expand" class="btn btn-warning">Expand All</button>
@@ -318,17 +318,17 @@
 									</table>
 								</div>
 								<!--===================================================-->
-								<!-- End Foo Table - Expand / Collapse All Rows -->
-					
-							<!--</div>
+                    <!-- End Foo Table - Expand / Collapse All Rows -->
+
+                    <!--</div>
 							<div class="panel">
 								<div class="panel-heading">
 									<h3 class="panel-title">Pagination</h3>
 								</div>
 					
 								<!-- Foo Table - Pagination -->
-								<!--===================================================-->
-								<!--<div class="panel-body">
+                    <!--===================================================-->
+                    <!--<div class="panel-body">
 									<label class="form-inline">Show
 										<select id="demo-show-entries" class="form-control input-sm">
 											<option value="5">5</option>
@@ -502,19 +502,19 @@
 									</table>
 								</div>
 								<!--===================================================-->
-								<!-- End Foo Table - Pagination -->
-					
-							<!--</div>
+                    <!-- End Foo Table - Pagination -->
+
+                    <!--</div>
 						</div>
 					</div>-->
-					<!--<div class="panel">
+                    <!--<div class="panel">
 						<div class="panel-heading">
 							<h3 class="panel-title">Filtering</h3>
 						</div>
 					
 						<!-- Foo Table - Filtering -->
-						<!--===================================================-->
-						<!--<div class="panel-body">
+                    <!--===================================================-->
+                    <!--<div class="panel-body">
 							<table id="demo-foo-filtering" class="table table-bordered table-hover toggle-circle" data-page-size="7">
 								<thead>
 									<tr>
@@ -768,81 +768,242 @@
 								</tfoot>
 							</table>
 						</div>-->
-						<!--===================================================-->
-						<!-- End Foo Table - Filtering -->
-					
-					</div>
-					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">Create</h3>
-						</div>
-					
-						<!-- Foo Table - Add & Remove Rows -->
-						<!--===================================================-->
-						<div class="panel-body">
-							
-							<form class='form-horizontal tasi-form' method='post' action='<?php echo site_url("site/createcampaignsubmit");?>' enctype='multipart/form-data'>
+                    <!--===================================================-->
+                    <!-- End Foo Table - Filtering -->
+
+                </div>
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Create</h3>
+                    </div>
+
+                    <!-- Foo Table - Add & Remove Rows -->
+                    <!--===================================================-->
                     <div class="panel-body">
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label" for="normal-field">Name</label>
-                            <div class="col-sm-4">
-                                <input type="text" id="normal-field" class="form-control" name="Name" value='<?php echo set_value(' Name ');?>'>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label" for="normal-field">Start Date</label>
-                            <div class="col-sm-4">
-                                <input type="date" id="normal-field" class="form-control" name="startdate" value='<?php echo set_value(' startdate ');?>'>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label" for="normal-field">Test Date</label>
-                            <div class="col-sm-4">
-                                <input type="date" id="normal-field" class="form-control" name="testdate" value='<?php echo set_value(' testdate ');?>'>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label" for="normal-field">Publishing Date</label>
-                            <div class="col-sm-4">
-                                <input type="date" id="normal-field" class="form-control" name="publishingdate" value='<?php echo set_value(' publishingdate ');?>'>
-                            </div>
-                        </div>
-<!--
-                        <div class=" form-group">
-                            <label class="col-sm-2 control-label" for="normal-field">User</label>
-                            <div class="col-sm-4">
-                                <?php echo form_dropdown( "user",$user,set_value( 'user'), "class='chzn-select form-control'");?>
-                            </div>
-                        </div>
--->
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label" for="normal-field">&nbsp;</label>
-                            <div class="col-sm-4">
-                                <button type="submit" class="btn btn-primary">Save</button>
-                                <a href="<?php echo site_url(" site/viewpage "); ?>" class="btn btn-secondary">Cancel</a>
-                            </div>
-                        </div>
-                </form>
-							
-						</div>
-						<!--===================================================-->
-						<!-- End Foo Table - Add & Remove Rows -->
-					
-					</div>
-					
-					
-					
-				</div>
-				<!--===================================================-->
-				<!--End page content-->
+
+                        <form class='form-horizontal tasi-form' method='post' action='<?php echo site_url("site/createcampaignsubmit");?>' enctype='multipart/form-data'>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label class="control-label" for="normal-field">Enter Your Name</label>
+                                    <div class="">
+                                        <input type="text" id="normal-field" class="form-control" name="Name" value='<?php echo set_value(' Name ');?>'>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="normal-field">Email System Used</label>
+                                    <div class="">
+                                        <select name="email_used" id="email_used" class="form-control" required="required">
+                                            <option value="" disabled="" selected="">Please Select</option>
+                                            <option va>Constant Contact</option>
+                                            <option>Eloqua</option>
+                                            <option>Hubspot</option>
+                                            <option>MailChimp</option>
+                                            <option>Marketo</option>
+                                            <option>None</option>
+                                            <option>Pardot</option>
+                                            <option>Vertical Response</option>
+                                            <option>Other</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="normal-field">What type of asset(s) do you want to create?</label>
+                                    <p class="grey">Select one or more assets to start building your campaign.</p>
+                                    <div class="">
+                                        <select name="question" id="assetselect" class=" form-control " required="required">
+                                            <option value="" disabled="" selected="">Please Select</option>
+                                            <option>Newsletter</option>
+                                            <option>Promotional Campaign</option>
+                                            <option>Press Release</option>
+                                            <option>Other</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="deadline">What is your deadline?</label>
+                                    <p class="grey">On what date do you need to send your final, tested email?</p>
+                                    <input type="date" name="deadline" id="deadline" class=" form-control" required="required">
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="resources">What creative resources do you need?</label>
+                                    <p class="grey">Select all that apply.</p>
+                                    <input type="checkbox" name="resources[]" value="Copy development">
+                                    <label for="resources"> &nbsp; Copy development </label>
+                                    <br>
+                                    <input type="checkbox" name="resources[]" value="Visual design">
+                                    <label for="resources"> &nbsp; Visual design </label>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="goals">What are your campaign goals?</label>
+                                    <p class="grey">Give us the why. Tell us about your specific business goals, metrics targets, how this relates to your market strategy, etc.</p>
+                                    <textarea class=" form-control " name="goals" rows="3" required="required"></textarea>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="audience">Who is your audience?</label>
+                                    <p class="grey">Consider factors such as industry, job role, lifestyle, location, age, etc. </p>
+                                    <textarea class=" form-control " name="audience" rows="3" required="required"></textarea>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="callactivate">What is your call to action?</label>
+                                    <p class="grey">What specific action do you want your audience to take after consuming your content? Click a link, take an assesment, buy your product, contact you, etc. </p>
+                                    <textarea class=" form-control " name="callactivate" rows="3"></textarea>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="reqelem">What required elements must this content or campaign include?</label>
+                                    <p class="grey">Consider factors such as industry, job role, lifestyle, location, age, etc. </p>
+                                    <textarea class=" form-control " name="reqelem" rows="3"></textarea>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="keywords">Are you targeting specific keywords?</label>
+                                    <p class="grey">List up to 5 words or phrases we should include.</p>
+                                    <textarea class=" form-control " name="keywords" rows="3"></textarea>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="specific">Should we include any specific messaging?</label>
+                                    <p class="grey">List catchphrases, slogans, statements, etc.</p>
+                                    <textarea class=" form-control " name="specific" rows="3"></textarea>
+                                </div>
+                                <div class=" form-group " style="margin-bottom: 0;">
+                                    <label class="control-label" for="specific_or">OR</label>
+                                </div>
+                                <div class=" form-group ">
+                                    <div class="col-lg-12 fileupload fileupload-new" data-provides="fileupload"> Upload Documents <span class="btn btn-primary btn-file custombtn"><span class="fileupload-new">BROWSE</span>
+                                        <input type="file" name="file1" id="file1" />
+                                        </span> <span class="fileupload-preview"></span>
+                                    </div>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="outline">Do you have an outline?</label>
+                                    <p class="grey">Already on top of it? Great! Upload or paste in the copy. </p>
+                                    <textarea class=" form-control " name="outline" rows="3" aria-required="true"></textarea>
+                                </div>
+                                <div class=" form-group ">
+                                    <div class="col-lg-12 fileupload fileupload-new" data-provides="fileupload"> Upload Documents <span class="btn btn-primary btn-file custombtn"><span class="fileupload-new">BROWSE</span>
+                                        <input type="file" name="file1" id="file1" />
+                                        </span> <span class="fileupload-preview"></span>
+                                    </div>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="avoid">Should we avoid any specific topics, phrases or jargon?</label>
+                                    <p class="grey">List specific examples.</p>
+                                    <textarea class=" form-control " name="avoid" rows="3"></textarea>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="material">Can you provide any source material?</label>
+                                    <p class="grey">Include any additional Guidelines your writer should follow, such as existing content or resources we should source, etc. </p>
+                                    <textarea class=" form-control " name="material" rows="3" aria-required="true"></textarea>
+                                </div>
+                                <div class=" form-group ">
+                                    <div class="col-lg-12 fileupload fileupload-new" data-provides="fileupload"> Upload Documents <span class="btn btn-primary btn-file custombtn"><span class="fileupload-new">BROWSE</span>
+                                        <input type="file" name="file1" id="file1" />
+                                        </span> <span class="fileupload-preview"></span>
+                                    </div>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="instructions">Any special instructions we should follow?</label>
+                                    <p class="grey">Include anything here not covered by the creative brief so far.</p>
+                                    <textarea class=" form-control " name="instructions" rows="3"></textarea>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="uorganization">Tell us about your organization.</label>
+                                    <p class="grey">Explain what your company does, sells or provides. </p>
+                                    <textarea class=" form-control " name="uorganization" rows="3" required="required"></textarea>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="industryp">What industry do you play in?</label>
+                                    <p class="grey">Select your primary industry.</p>
+                                    <select name="industryp" class=" form-control " required="required">
+                                        <option value="" disabled="" selected="">Please Select</option>
+
+                                        <option> Accounting</option>
+                                        <option>Automotive</option>
+                                        <option>Advertising</option>
+                                        <option>Banking</option>
+                                        <option>Bio Technology</option>
+                                        <option>Chemical</option>
+                                        <option>Consulting</option>
+                                        <option>Defense</option>
+                                        <option>Education</option>
+                                        <option>Eletronics</option>
+                                        <option>Environment</option>
+                                        <option>Energy</option>
+                                        <option>Entertainement</option>
+                                        <option>Financial Services</option>
+                                        <option>Food</option>
+                                        <option>Healthcare</option>
+                                        <option>Internet</option>
+                                        <option>Legal</option>
+                                        <option>Manufacturing</option>
+                                        <option>Music</option>
+                                        <option>News</option>
+                                        <option>Real Estate</option>
+                                        <option>Software</option>
+                                        <option>Sports</option>
+                                        <option>Transportation</option>
+                                        <option>Others</option>
 
 
-			</div>
-			<!--===================================================-->
-			<!--END CONTENT CONTAINER-->
+                                    </select>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="propositions">What are your primary value propositions?</label>
+                                    <p class="grey">List up to three things that define or differentiate your organization. </p>
+                                    <textarea class=" form-control " name="propositions" rows="1" aria-required="true" maxlength="250" style="margin-bottom:7px;"></textarea>
+                                    <textarea class=" form-control " name="propositions1" rows="1" aria-required="true" maxlength="250" style="margin-bottom:7px;"></textarea>
+                                    <textarea class=" form-control " name="propositions2" rows="1" aria-required="true" maxlength="250" style="margin-bottom:7px;"></textarea>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="itrends">What industry trends should our writers consider?</label>
+                                    <p class="grey">Provide some context for defining your point of view. </p>
+                                    <textarea class=" form-control " name="itrends" rows="3"></textarea>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="mcompetitors">Who are your main competitors?</label>
+                                    <p class="grey">List up to three organizations that play in your sandbox. What are their strengths,weaknesses, etc.? </p>
+                                    <textarea class=" form-control " name="mcompetitors" rows="3"></textarea>
+                                </div>
+                                <div class=" form-group ">
+                                    <label class="control-label" for="branding">Do you have branding guidelines we should follow?</label>
+                                    <p class="grey">Upload or provide links to any style guides or brand guidelines the creative team must adhere to. </p>
+                                    <textarea class=" form-control " name="branding" rows="3"></textarea>
+                                </div>
+                                <div class="col-lg-12 fileupload fileupload-new" data-provides="fileupload"> Upload Design <span class="btn btn-primary btn-file custombtn"><span class="fileupload-new">BROWSE</span>
+                                    <input type="file" name="file" id="file" />
+                                    </span>
+                                </div>
+                            </div>
 
 
-<!--
+                            <div class="form-group">
+                                <label class="control-label" for="normal-field">&nbsp;</label>
+                                <div class="col-sm-4">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <a href="<?php echo site_url(" site/viewpage "); ?>" class="btn btn-secondary">Cancel</a>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <!--===================================================-->
+                    <!-- End Foo Table - Add & Remove Rows -->
+
+                </div>
+
+
+
+        </div>
+        <!--===================================================-->
+        <!--End page content-->
+
+
+    </div>
+    <!--===================================================-->
+    <!--END CONTENT CONTAINER-->
+
+
+    <!--
 <section class="panel">
     <header class="panel-heading">
         Campaign Details

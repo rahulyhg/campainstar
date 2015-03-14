@@ -56,7 +56,7 @@
                 </div>
 
                 <!--Form-->
-                <form class="form-horizontal" action="" method="POST">
+                <form class="form-horizontal">
                     <div class="panel-body">
                         <div class="tab-content">
 

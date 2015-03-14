@@ -110,7 +110,7 @@
     <script src="<?php echo base_url('assets/js/jquery.tagsinput.js'); ?>"></script>
 	
 	<!--script for this page-->
-	<script src="<?php echo base_url('assets/js/form-component.js'); ?>"></script>
+<!--	<script src="<?php echo base_url('assets/js/form-component.js'); ?>"></script>-->
 	<script src="<?php echo base_url('assets/js/select2.js'); ?>" type="text/javascript"></script>
 	<script src="<?php echo base_url('assets/js/select2.min.js'); ?>" type="text/javascript"></script>
   <script>
