@@ -355,6 +355,19 @@ class Site extends CI_Controller
         $data['title']='Create Campaign';
         $this->load->view('template',$data);
 	}
+	public function email()
+	{
+		$this->load->library('email');
+		$this->email->from('your@example.com', 'campaign');
+		$this->email->to('jagruti@wohlig.com'); 
+
+		$this->email->subject('Test');
+		$this->email->message('Testing the email');	
+
+		$this->email->send();
+
+		echo $this->email->print_debugger();
+	}
     public function createcampaignsubmit() 
     {
         $access=array("3");
@@ -452,8 +465,36 @@ class Site extends CI_Controller
             $campaignid=$this->campaignaccess_model->create($Name,$emailused,$question,$deadline,$goals,$audience,$callactivate,$reqelem,$keywords,$specific,$outline,$avoid,$material,$instructions,$uorganization,$industryp,$propositions,$propositions1,$propositions2,$itrends,$mcompetitors,$branding,$specificfile,$outlinefile,$materialfile,$brandingfile,$user);
             if($campaignid==0)
             $data["alerterror"]="New Campaign could not be created.";
-            else
-            $data["alertsuccess"]="Campaign created Successfully.";
+            else{
+            	$data["alertsuccess"]="Campaign created Successfully.";
+				
+				
+				$to = "jagruti@wohlig.com";
+				$subject = "HTML email";
+
+				$message = "
+				<html>
+				<head>
+				<title>Campaign star</title>
+				</head>
+				<body>
+				<p>This email contains HTML Tags!</p>
+				</body>
+				</html>
+				";
+
+				// Always set content-type when sending HTML email
+				$headers = "MIME-Version: 1.0" . "\r\n";
+				$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+				// More headers
+				$headers .= 'From: <webmaster@example.com>' . "\r\n";
+				$headers .= 'Cc: myboss@example.com' . "\r\n";
+
+				mail($to,$subject,$message,$headers);
+				
+				
+			}
             $data["redirect"]="site/viewcampaigngroupsbycampaign?id=$campaignid";
             $this->load->view("redirect2",$data);
         }
