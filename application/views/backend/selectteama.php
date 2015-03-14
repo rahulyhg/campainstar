@@ -20,7 +20,7 @@
 									        <div class="panel widget">
                                                 <div class="widget-header bg-primary1"></div>
                                                 <div class="widget-body text-center">
-                                                    <img alt="Profile Picture" class="widget-img img-circle img-border-light" src="<?php echo base_url("assets");?>/img/av4.png">
+                                                    <img alt="Profile Picture" class="widget-img img-circle img-border-light" src="<?php echo base_url("assets");?>/img/av1.png">
                                                     <h4 class="mar-no"><?php echo $row->name;?></h4>
                                                     <p class="text-muted mar-btm"></p>
 
