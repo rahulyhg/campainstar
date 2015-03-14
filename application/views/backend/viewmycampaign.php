@@ -39,6 +39,7 @@
                 <!-- Foo Table - Add & Remove Rows -->
                 <!--===================================================-->
                 <div class="panel-body">
+<<<<<<< HEAD
                     <table id="demo-foo-addrow" class="table table-bordered table-hover toggle-circle" data-page-size="7">
                         <thead>
                             <tr>
@@ -189,6 +190,48 @@
                     </table>
 
 
+=======
+                 
+                   <table id="demo-foo-addrow" class="table table-bordered footable footable-loaded table-hover toggle-circle" data-filter="#filter" data-page-size="7">
+								<thead>
+									<tr>
+										<th data-sort-initial="true" data-toggle="true">Campaign Name</th>
+										<th>Opens</th>
+										<th data-hide="phone, tablet">Clicks</th>
+										<th data-hide="phone, tablet">Date</th>
+										<th data-hide="phone, tablet">Status</th>
+										<th data-hide="phone, tablet" style="width:200px;">Action</th>
+									</tr>
+								</thead>
+								
+								<tbody>
+								<?php foreach($table as $row) {
+                                    $row->reports=json_decode($row->reports);
+                                    ?>
+									<tr>
+										<td><?php echo $row->Name; ?></td>
+										<td><?php echo $row->reports[0]->value;?> </td>
+										<td><?php echo $row->reports[1]->value;?> </td>
+										<td><?php echo $row->startdate;?></td>
+										<td><span class="label label-table label-success">Active</span></td>
+										<td>
+										<a href="<?php echo site_url("site/moremycampaign?id=").$row->id;?>" class="btn btn-success">View</a>
+										<a href="<?php echo site_url("site/deletecampaignbyuser?id=").$row->id;?>" class="btn btn-danger">Delete</a></td>
+									</tr>
+									<?php } ?>
+									
+								</tbody>
+								<tfoot>
+									<tr>
+										<td colspan="6">
+											<div class="text-right">
+												<ul class="pagination"></ul>
+											</div>
+										</td>
+									</tr>
+								</tfoot>
+							</table>
+>>>>>>> origin/master
 
                 </div>
                 <!--===================================================-->
