@@ -1,7 +1,7 @@
 <div class="boxed">
     <div class="formbox">
-       <div id="page-title">
-        <h1 class="page-header text-overflow">Get started</h1>
+        <div id="page-title">
+            <h1 class="page-header text-overflow">Get started</h1>
         </div>
         <ol class="breadcrumb">
             <li><a href="#">Account Setup</a>
@@ -67,26 +67,25 @@
 
                             <!--First tab-->
                             <div id="demo-step-tab1" class="tab-pane">
-                               <div class="no-margin">
-                                     <div class="form-group">
+                                <div class="no-margin">
+                                    <div class="form-group">
                                         <label class="col-lg-3 control-label txt">Full Name</label>
                                         <div class="col-lg-7">
                                             <input type="text" class="form-control txt" name="fullname" placeholder="">
                                         </div>
                                     </div>
-
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-lg-3 control-label txt">Email Addresss</label>
-                                    <div class="col-lg-7">
-                                        <input type="text" class="form-control txt" name="emailaddress" placeholder="">
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label txt">Email Addresss</label>
+                                        <div class="col-lg-7">
+                                            <input type="text" class="form-control txt" name="emailaddress" placeholder="">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-lg-3 control-label txt">Enter Password</label>
-                                    <div class="col-lg-7">
-                                        <input type="password" class="form-control txt" name="choosepassword" placeholder="">
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label txt">Enter Password</label>
+                                        <div class="col-lg-7">
+                                            <input type="password" class="form-control txt" name="choosepassword" placeholder="">
 
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-lg-3 control-label txt">Re Enter Password</label>
@@ -99,31 +98,31 @@
 
                             <!--Second tab-->
                             <div id="demo-step-tab2" class="tab-pane fade">
-                                <div class="form-group">
-                                    <label class="col-lg-3 control-label">Campany Name</label>
-                                    <div class="col-lg-7">
-                                        <input type="text" class="form-control txt" name="companyname" placeholder="">
+                                <div class="no-margin"><div class="form-group">
+                                        <label class="col-lg-3 control-label">Campany Name</label>
+                                        <div class="col-lg-7">
+                                            <input type="text" class="form-control txt" name="companyname" placeholder="">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-lg-3 control-label">Campany Url</label>
-                                    <div class="col-lg-7">
-                                        <input type="text" class="form-control txt" name="companyurl" placeholder="">
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label">Campany Url</label>
+                                        <div class="col-lg-7">
+                                            <input type="text" class="form-control txt" name="companyurl" placeholder="">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-lg-3 control-label">Upload Logo</label>
-                                    <div class="col-lg-7">
-                                        <input type="file" class="form-control txt" name="companylogo" placeholder="">
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label">Upload Logo</label>
+                                        <div class="col-lg-7">
+                                            <input type="file" class="form-control txt" name="companylogo" placeholder="">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-lg-3 control-label">Industry</label>
-                                    <div class="col-lg-7">
-                                        <input type="text" class="form-control txt" name="industry" placeholder="">
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label">Industry</label>
+                                        <div class="col-lg-7">
+                                            <input type="text" class="form-control txt" name="industry" placeholder="">
+                                        </div>
                                     </div>
-                                </div>
-
+                                    </div>
                             </div>
 
                             <!--Third tab-->
@@ -183,10 +182,10 @@
 -->
 
                         <div class="box-inline">
-                            <button type="button" class="previous btn back">Back</button>
-                            <button type="button" class="next btn continue">Continue</button>
-<!--                            <button type="submit" class="btn btn-primary">Submit</button>-->
-                            <button type="submit" class="finish btn continue" disabled>Setup my Account</button>
+                            <button type="button" class="previous btn btn-default">Back</button>
+                            <button type="button" class="next btn btn-primary">Continue</button>
+                            <!--                            <button type="submit" class="btn btn-primary">Submit</button>-->
+                            <button type="submit" class="finish btn btn-primary" disabled>Setup my Account</button>
                         </div>
 
                     </div>
@@ -202,18 +201,18 @@
 <!--END CONTENT CONTAINER-->
 
 <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
         $('#demo-step-wz').bootstrapWizard({
             tabClass: 'wz-steps',
             nextSelector: '.next',
             previousSelector: '.previous',
-            onTabClick: function (tab, navigation, index) {
+            onTabClick: function(tab, navigation, index) {
                 return false;
             },
-            onInit: function () {
+            onInit: function() {
                 $('#demo-step-wz').find('.finish').hide().prop('disabled', true);
             },
-            onTabShow: function (tab, navigation, index) {
+            onTabShow: function(tab, navigation, index) {
                 var $total = navigation.find('li').length;
                 var $current = index + 1;
                 var $percent = (index / $total) * 100;

@@ -1,8 +1,12 @@
 <div class="boxed">
-  							<div class="boxinner">
-					<h3 class="started">My Campaigns</h3>
-<!--					           <p class="account">RED BULL NEWSLETTER>SELECT TEAM A</p>-->
-					           <p class="account">SELECT TEAS</p>
+  							<div class="formbox w100">
+					           
+					           <div id="page-title">
+					<h1 class="page-header text-overflow">My Campaigns</h1>
+
+				
+<ol class="breadcrumb">
+    <li><a href="#">Select Teams</a></li></ol>
 								<!-- Circular Form Wizard -->
 								<!--===================================================-->
 								<div id="demo-step-wz">

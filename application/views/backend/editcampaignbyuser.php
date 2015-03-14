@@ -26,7 +26,7 @@
 				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 				<!--End page title-->
 <ol class="breadcrumb">
-					<li><a href="#">Home</a></li>
+    <li><a href="#">Home</a></li></ol>
 				<!--Page content-->
 				<!--===================================================-->
 				<div id="page-content">
@@ -781,14 +781,14 @@
 						<!--===================================================-->
 						<div class="panel-body">
 							
-							<form class='form-horizontal tasi-form' method='post' action='<?php echo site_url("site/editcampaignsubmitbyuser");?>' enctype='multipart/form-data'>
+							<form class='form-horizontal tasi-form no-margin padding' method='post' action='<?php echo site_url("site/editcampaignsubmitbyuser");?>' enctype='multipart/form-data'>
                                 <input type="hidden" id="normal-field" class="form-control" name="id" value="<?php echo set_value('id',$before->id);?>" style="display:none;">
                                 <input type="hidden" id="normal-field" class="form-control" name="user" value="<?php echo set_value('user',$before->user);?>" style="display:none;">
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="normal-field">Name</label>
-                                    <div class="col-sm-4">
+                                    <label class="control-label" for="normal-field">Name</label>
+<br>
                                         <input type="text" id="normal-field" class="form-control" name="Name" value='<?php echo set_value(' Name ',$before->Name);?>'>
-                                    </div>
+
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="normal-field">Email System Used</label>
