@@ -36,10 +36,10 @@ print_r($table);
                         <div class="tab-content">
                            
                             <div class="tab-pane fade in active text-center" id="demo-tabs-box-1">
-                                <img src="<?php echo base_url('uploads/').$row->image;?>" height="100%" width="100%">
+                                <img src="<?php echo base_url('uploads/')."/".$row->image;?>" height="100%" width="100%">
                             </div>
                             <div class="tab-pane fade" id="demo-tabs-box-2">
-                                <img src="<?php echo base_url('uploads/').$row->mobileimage;?>" height="100%" width="100%">
+                                <img src="<?php echo base_url('uploads/')."/".$row->mobileimage;?>" height="100%" width="100%">
                             </div>
                         </div>
                     </div>
