@@ -270,6 +270,9 @@ class Site extends CI_Controller
 		$this->checkaccess($access);
             $data[ 'page' ] = 'resultsandanaltys';
         $campaignid=$this->input->get_post("id");
+        $userid=$this->session->userdata('id');
+         $data['campaignid'] = $this->input->get_post("id");
+        $data['campaigns'] = $this->campaignaccess_model->getcampaignbyuser($userid);
         $data['table']=$this->campaignaccess_model->getcampaignresults($campaignid);
            $data['title']='resultsandanaltys';
             $this->load->view('template',$data);
