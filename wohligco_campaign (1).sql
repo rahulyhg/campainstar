@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.0.10.5
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 14, 2015 at 01:01 PM
--- Server version: 5.5.32
--- PHP Version: 5.4.19
+-- Host: localhost
+-- Generation Time: Mar 14, 2015 at 08:10 AM
+-- Server version: 5.6.21
+-- PHP Version: 5.4.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `wohligco_campaign`
 --
-CREATE DATABASE IF NOT EXISTS `wohligco_campaign` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `wohligco_campaign`;
 
 -- --------------------------------------------------------
 
@@ -43,33 +41,6 @@ INSERT INTO `accesslevel` (`id`, `name`) VALUES
 (1, 'admin'),
 (3, 'Customer'),
 (2, 'Designer');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `acount`
---
-
-CREATE TABLE IF NOT EXISTS `acount` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `fullname` varchar(100) NOT NULL,
-  `emailaddresss` varchar(100) NOT NULL,
-  `choosepassword` varchar(100) NOT NULL,
-  `reenterpassword` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
-
---
--- Dumping data for table `acount`
---
-
-INSERT INTO `acount` (`id`, `fullname`, `emailaddresss`, `choosepassword`, `reenterpassword`) VALUES
-(1, 'shrutika', 'shrutika.jadhav712yahoo.com', 'scl123', 'scj123'),
-(2, 'shrutika', 'shrutika.jadhav712yahoo.com', 'vv', 'ddff'),
-(3, '', '', '', ''),
-(4, '0', '0', '0', '0'),
-(5, '', '0', '0', '0'),
-(6, '0', '0', '0', '0');
 
 -- --------------------------------------------------------
 
@@ -130,50 +101,24 @@ CREATE TABLE IF NOT EXISTS `campaign_campaign` (
   `publishingdate` date NOT NULL,
   `user` int(11) NOT NULL,
   `status` int(11) NOT NULL,
-  `emailused` varchar(255) NOT NULL,
-  `question` text NOT NULL,
-  `deadline` date NOT NULL,
-  `goals` text NOT NULL,
-  `audience` text NOT NULL,
-  `callactivate` varchar(255) NOT NULL,
-  `reqelem` text NOT NULL,
-  `keywords` text NOT NULL,
-  `specific` text NOT NULL,
-  `outline` text NOT NULL,
-  `avoid` text NOT NULL,
-  `material` text NOT NULL,
-  `instructions` text NOT NULL,
-  `uorganization` text NOT NULL,
-  `industryp` text NOT NULL,
-  `propositions` text NOT NULL,
-  `propositions1` text NOT NULL,
-  `propositions2` text NOT NULL,
-  `itrends` text NOT NULL,
-  `mcompetitors` text NOT NULL,
-  `branding` text NOT NULL,
-  `specificfile` varchar(255) NOT NULL,
-  `outlinefile` varchar(255) NOT NULL,
-  `materialfile` varchar(255) NOT NULL,
-  `brandingfile` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
 -- Dumping data for table `campaign_campaign`
 --
 
-INSERT INTO `campaign_campaign` (`id`, `Name`, `startdate`, `testdate`, `publishingdate`, `user`, `status`, `emailused`, `question`, `deadline`, `goals`, `audience`, `callactivate`, `reqelem`, `keywords`, `specific`, `outline`, `avoid`, `material`, `instructions`, `uorganization`, `industryp`, `propositions`, `propositions1`, `propositions2`, `itrends`, `mcompetitors`, `branding`, `specificfile`, `outlinefile`, `materialfile`, `brandingfile`) VALUES
-(5, 'demo edit', '2015-03-04', '2015-03-05', '2015-03-05', 13, 1, '', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(7, 'demo2', '2015-03-07', '2015-03-06', '2015-03-08', 1, 6, '', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(8, 'demo2', '2015-03-07', '2015-03-06', '2015-03-08', 1, 1, '', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(9, 'avinashcampaign', '2015-03-08', '2015-03-10', '2015-03-12', 14, 2, '', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(10, 'Chintan', '2015-03-11', '2015-03-13', '2015-03-15', 14, 2, '', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(11, 'Mahesh', '2015-03-15', '2015-03-18', '2015-03-19', 14, 6, '', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(12, 'Test', '2015-03-05', '2015-03-07', '2015-03-14', 14, 2, '', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(13, 'Sohan', '2015-03-05', '2015-03-06', '2015-03-07', 14, 6, '', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(14, 'ahmed', '2015-06-06', '2015-09-09', '2015-03-19', 14, 6, '', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(15, 'xcxc', '2015-03-13', '2015-03-20', '2015-03-21', 14, 2, '', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(16, '2', '0000-00-00', '0000-00-00', '0000-00-00', 14, 1, 'Constant Contact', 'Newsletter', '2015-03-21', 'sindcs', 'oisdoasd', 'sodicos', 'sdcjnsdij', 'scsdc', 'value=''value=''sdjcns''''', 'skjnsdkc', 'sdcns', 'sjkcnsidjc', 'sdjcnsidcn', 'aisuxiusdci', 'Energy', 'jdsnckjs', 'jnsckj', 'jsdcnkjsd', 'sdcnsdjk', 'sdkjcns', 'skcmsdkc', 'cron1.php', 'home1.html', 'wohligco_campaign1.sql', 'spark.info');
+INSERT INTO `campaign_campaign` (`id`, `Name`, `startdate`, `testdate`, `publishingdate`, `user`, `status`) VALUES
+(5, 'demo edit', '2015-03-04', '2015-03-05', '2015-03-05', 13, 1),
+(7, 'demo2', '2015-03-07', '2015-03-06', '2015-03-08', 1, 6),
+(8, 'demo2', '2015-03-07', '2015-03-06', '2015-03-08', 1, 1),
+(9, 'avinashcampaign', '2015-03-08', '2015-03-10', '2015-03-12', 14, 6),
+(10, 'Chintan', '2015-03-11', '2015-03-13', '2015-03-15', 14, 2),
+(11, 'Mahesh', '2015-03-15', '2015-03-18', '2015-03-19', 14, 6),
+(12, 'Test', '2015-03-05', '2015-03-07', '2015-03-14', 14, 2),
+(13, 'Sohan', '2015-03-05', '2015-03-06', '2015-03-07', 14, 6),
+(14, 'ahmed', '2015-06-06', '2015-09-09', '2015-03-19', 14, 6),
+(15, 'xcxc', '2015-03-13', '2015-03-20', '2015-03-21', 14, 2);
 
 -- --------------------------------------------------------
 
@@ -188,8 +133,6 @@ CREATE TABLE IF NOT EXISTS `campaign_campaigngroup` (
   `order` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL,
   `group` varchar(255) NOT NULL,
-  `image` varchar(255) NOT NULL,
-  `htmldata` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
 
@@ -197,33 +140,33 @@ CREATE TABLE IF NOT EXISTS `campaign_campaigngroup` (
 -- Dumping data for table `campaign_campaigngroup`
 --
 
-INSERT INTO `campaign_campaigngroup` (`id`, `campaign`, `Timestamp`, `order`, `status`, `group`, `image`, `htmldata`) VALUES
-(1, '5', '2015-03-07 06:29:43', '1', '1', '2', '', ''),
-(2, '7', '2015-03-07 04:32:57', '1', '1', '2', '', ''),
-(3, '7', '2015-03-05 11:30:25', '2', '1', '3', '', ''),
-(4, '7', '2015-03-05 11:30:31', '3', '3', '4', '', ''),
-(5, '5', '2015-03-07 07:57:17', '1', '2', '3', '', ''),
-(6, '5', '2015-03-07 07:57:23', 'demooo', '1', '4', '', ''),
-(7, '9', '2015-03-14 08:50:30', '1', '1', '2', '', ''),
-(8, '9', '2015-03-14 08:54:53', '2', '1', '3', '', ''),
-(9, '9', '2015-03-07 10:10:35', '3', '2', '4', '', ''),
-(10, '10', '2015-03-10 13:45:03', '1', '1', '5', '', ''),
-(11, '10', '2015-03-09 05:54:16', '2', '2', '6', '', ''),
-(12, '10', '2015-03-10 13:45:07', '3', '1', '2', '', ''),
-(13, '11', '2015-03-09 07:54:08', '1', '1', '5', '', ''),
-(14, '11', '2015-03-09 08:01:10', '2', '1', '6', '', ''),
-(15, '11', '2015-03-09 07:54:57', '3', '2', '2', '', ''),
-(16, '12', '2015-03-09 11:13:09', '1', '1', '5', '', ''),
-(17, '12', '2015-03-10 06:15:17', '2', '3', '6', '', ''),
-(18, '12', '2015-03-10 05:26:02', '3', '1', '2', '', ''),
-(19, '13', '2015-03-10 06:49:57', '1', '1', '2', '', ''),
-(20, '13', '2015-03-10 06:50:02', '2', '1', '6', '', ''),
-(21, '14', '2015-03-10 13:50:12', '', '1', '6', '', ''),
-(22, '14', '2015-03-10 13:49:39', '', '1', '3', '', ''),
-(23, '15', '2015-03-10 14:01:45', '', '1', '2', '', ''),
-(24, '15', '2015-03-10 14:01:00', '', '3', '3', '', ''),
-(25, '15', '2015-03-10 14:01:47', '', '1', '4', '', ''),
-(26, '15', '2015-03-10 14:01:26', '', '3', '5', '', '');
+INSERT INTO `campaign_campaigngroup` (`id`, `campaign`, `Timestamp`, `order`, `status`, `group`) VALUES
+(1, '5', '2015-03-07 06:29:43', '1', '1', '2'),
+(2, '7', '2015-03-07 04:32:57', '1', '1', '2'),
+(3, '7', '2015-03-05 11:30:25', '2', '1', '3'),
+(4, '7', '2015-03-05 11:30:31', '3', '3', '4'),
+(5, '5', '2015-03-07 07:57:17', '1', '2', '3'),
+(6, '5', '2015-03-07 07:57:23', 'demooo', '1', '4'),
+(7, '9', '2015-03-07 10:10:42', '1', '1', '2'),
+(8, '9', '2015-03-07 10:10:53', '2', '1', '3'),
+(9, '9', '2015-03-07 10:10:35', '3', '2', '4'),
+(10, '10', '2015-03-10 13:45:03', '1', '1', '5'),
+(11, '10', '2015-03-09 05:54:16', '2', '2', '6'),
+(12, '10', '2015-03-10 13:45:07', '3', '1', '2'),
+(13, '11', '2015-03-09 07:54:08', '1', '1', '5'),
+(14, '11', '2015-03-09 08:01:10', '2', '1', '6'),
+(15, '11', '2015-03-09 07:54:57', '3', '2', '2'),
+(16, '12', '2015-03-09 11:13:09', '1', '1', '5'),
+(17, '12', '2015-03-10 06:15:17', '2', '3', '6'),
+(18, '12', '2015-03-10 05:26:02', '3', '1', '2'),
+(19, '13', '2015-03-10 06:49:57', '1', '1', '2'),
+(20, '13', '2015-03-10 06:50:02', '2', '1', '6'),
+(21, '14', '2015-03-10 13:50:12', '', '1', '6'),
+(22, '14', '2015-03-10 13:49:39', '', '1', '3'),
+(23, '15', '2015-03-10 14:01:45', '', '1', '2'),
+(24, '15', '2015-03-10 14:01:00', '', '3', '3'),
+(25, '15', '2015-03-10 14:01:47', '', '1', '4'),
+(26, '15', '2015-03-10 14:01:26', '', '3', '5');
 
 -- --------------------------------------------------------
 
@@ -362,66 +305,6 @@ INSERT INTO `campaign_plan` (`id`, `Name`, `Duration`, `Amount`, `numberofcampai
 -- --------------------------------------------------------
 
 --
--- Table structure for table `company`
---
-
-CREATE TABLE IF NOT EXISTS `company` (
-  `campanyname` varchar(100) NOT NULL,
-  `campanyurl` varchar(100) NOT NULL,
-  `logo` varchar(100) NOT NULL,
-  `selectindustry` varchar(100) NOT NULL,
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
-
---
--- Dumping data for table `company`
---
-
-INSERT INTO `company` (`campanyname`, `campanyurl`, `logo`, `selectindustry`, `id`) VALUES
-('wohlig', 'wohligco', 'wohlig logo', 'whlig', 1),
-('wohlig', 'wohligco', 'wohlig logo', 'wohlig', 2),
-('0', '0', '0', '0', 3),
-('0', '0', '0', '0', 4),
-('0', '0', '0', '0', 5),
-('0', '0', '0', '0', 6),
-('0', '0', '0', '0', 7),
-('0', '0', '0', '0', 8),
-('demo ', 'demo', 'demo', 'demo', 9),
-('demo ', 'demo', 'demo', 'demo', 10),
-('demo ', 'demo', 'demo', 'demo', 11),
-('campany demo test', 'campany url test', 'campany url logo', 'campany url industry', 12),
-('', '', '', '', 13),
-('0', '0', '0', '0', 14),
-('0', '0', '0', '0', 15),
-('0', '0', '0', '0', 16);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `list`
---
-
-CREATE TABLE IF NOT EXISTS `list` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL,
-  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `filename` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
-
---
--- Dumping data for table `list`
---
-
-INSERT INTO `list` (`id`, `name`, `timestamp`, `filename`) VALUES
-(2, 'book', '2015-03-13 12:42:17', 'Book15.xlsx'),
-(3, 'excel', '2015-03-13 12:51:08', 'Book16.xlsx'),
-(4, 'Demo', '2015-03-13 13:48:00', 'Book17.xlsx');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `logintype`
 --
 
@@ -547,20 +430,6 @@ INSERT INTO `plan` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `setting`
---
-
-CREATE TABLE IF NOT EXISTS `setting` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `emailsystem` varchar(100) NOT NULL,
-  `brandguildlines` varchar(100) NOT NULL,
-  `guildlines` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `statuses`
 --
 
@@ -600,33 +469,22 @@ CREATE TABLE IF NOT EXISTS `user` (
   `socialid` varchar(255) NOT NULL,
   `logintype` int(11) NOT NULL,
   `json` text NOT NULL,
-  `mailchipid` varchar(255) NOT NULL,
-  `companyname` varchar(255) NOT NULL,
-  `companyurl` varchar(255) NOT NULL,
-  `industry` varchar(255) NOT NULL,
-  `emailsystem` varchar(255) NOT NULL,
-  `guidline` varchar(255) NOT NULL,
-  `emailsystem2` varchar(255) NOT NULL,
-  `brandguidlines` varchar(255) NOT NULL,
-  `companylogo` varchar(255) NOT NULL,
-  `guidlinesfile` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `password`, `email`, `accesslevel`, `timestamp`, `status`, `image`, `username`, `socialid`, `logintype`, `json`, `mailchipid`, `companyname`, `companyurl`, `industry`, `emailsystem`, `guidline`, `emailsystem2`, `brandguidlines`, `companylogo`, `guidlinesfile`) VALUES
-(1, 'wohlig', 'a63526467438df9566c508027d9cb06b', 'wohlig@wohlig.com', 1, '0000-00-00 00:00:00', 1, NULL, '', '', 0, '', '989', '', '', '', '', '', '', '', '', ''),
-(4, 'pratik', '0cb2b62754dfd12b6ed0161d4b447df7', 'pratik@wohlig.com', 1, '2014-05-12 06:52:44', 1, NULL, 'pratik', '1', 1, '', '87917918', '', '', '', '', '', '', '', '', ''),
-(5, 'wohlig123', 'wohlig123', 'wohlig1@wohlig.com', 1, '2014-05-12 06:52:44', 1, NULL, '', '', 0, '', '87917918', '', '', '', '', '', '', '', '', ''),
-(6, 'wohlig1', 'a63526467438df9566c508027d9cb06b', 'wohlig2@wohlig.com', 1, '2014-05-12 06:52:44', 1, NULL, '', '', 0, '', '87917918', '', '', '', '', '', '', '', '', ''),
-(7, 'A', '7b0a80efe0d324e937bbfc7716fb15d3', 'avinash@wohlig.com', 1, '2014-10-17 06:22:29', 1, NULL, '', '', 1, '', '87917918', '', '', '', '', '', '', '', '', ''),
-(9, 'avi', 'a208e5837519309129fa466b0c68396b', 'a@email.com', 2, '2014-12-03 11:06:19', 3, '', '', '123', 1, 'demojson', '87917918', '', '', '', '', '', '', '', '', ''),
-(13, 'aaa', 'a208e5837519309129fa466b0c68396b', 'aaa3@email.com', 3, '2014-12-04 06:55:42', 3, NULL, '', '1', 2, 'userjson', '87917918', '', '', '', '', '', '', '', '', ''),
-(14, 'Avinash', '91ec1f9324753048c0096d036a694f86', 'customer@wohlig.com', 3, '2015-03-07 09:02:04', 1, 'event48830.jpg', '', '1', 1, 'demojson', '87917918', '', '', '', '', '', '', '', '', ''),
-(15, 'avinash', 'a208e5837519309129fa466b0c68396b', 'a@a.com', NULL, '2015-03-14 11:57:34', NULL, NULL, '', '', 0, '', '', 'avinash', 'avinash.com', 'demo', 'ashxbaj', 'No', 'sdcnsdc', 'Wire Tranfer', '', '');
+INSERT INTO `user` (`id`, `name`, `password`, `email`, `accesslevel`, `timestamp`, `status`, `image`, `username`, `socialid`, `logintype`, `json`) VALUES
+(1, 'wohlig', 'a63526467438df9566c508027d9cb06b', 'wohlig@wohlig.com', 1, '0000-00-00 00:00:00', 1, NULL, '', '', 0, ''),
+(4, 'pratik', '0cb2b62754dfd12b6ed0161d4b447df7', 'pratik@wohlig.com', 1, '2014-05-12 06:52:44', 1, NULL, 'pratik', '1', 1, ''),
+(5, 'wohlig123', 'wohlig123', 'wohlig1@wohlig.com', 1, '2014-05-12 06:52:44', 1, NULL, '', '', 0, ''),
+(6, 'wohlig1', 'a63526467438df9566c508027d9cb06b', 'wohlig2@wohlig.com', 1, '2014-05-12 06:52:44', 1, NULL, '', '', 0, ''),
+(7, 'A', '7b0a80efe0d324e937bbfc7716fb15d3', 'avinash@wohlig.com', 1, '2014-10-17 06:22:29', 1, NULL, '', '', 1, ''),
+(9, 'avi', 'a208e5837519309129fa466b0c68396b', 'a@email.com', 2, '2014-12-03 11:06:19', 3, '', '', '123', 1, 'demojson'),
+(13, 'aaa', 'a208e5837519309129fa466b0c68396b', 'aaa3@email.com', 3, '2014-12-04 06:55:42', 3, NULL, '', '1', 2, 'userjson'),
+(14, 'Avinash', '91ec1f9324753048c0096d036a694f86', 'customer@wohlig.com', 3, '2015-03-07 09:02:04', 1, 'event48830.jpg', '', '1', 1, 'demojson');
 
 -- --------------------------------------------------------
 
