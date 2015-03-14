@@ -37,7 +37,7 @@
 									       <div class="panel panel-danger panel-colorful bluetxt">
 								<div class="panel panel-danger panel-colorful bluetxt">
 								<div class="panel-body text-center ">
-									<p class="text-uppercase mar-btm text-sm">Opened</p>
+									<p class="text-uppercase mar-btm text-sm">Clicked</p>
 									<p class="h2 text-thin">13456</p>
 									<hr>
 									<h4>43%</h4>
@@ -50,7 +50,7 @@
 									       <div class="panel panel-danger panel-colorful bluetxt">
 								<div class="panel panel-danger panel-colorful bluetxt">
 								<div class="panel-body text-center ">
-									<p class="text-uppercase mar-btm text-sm">Opened</p>
+									<p class="text-uppercase mar-btm text-sm">Bounced</p>
 									<p class="h2 text-thin">13456</p>
 									<hr>
 									<h4>43%</h4>
@@ -64,7 +64,7 @@
 									       <div class="panel panel-danger panel-colorful bluetxt">
 								<div class="panel panel-danger panel-colorful bluetxt">
 								<div class="panel-body text-center ">
-									<p class="text-uppercase mar-btm text-sm">Opened</p>
+									<p class="text-uppercase mar-btm text-sm">Unsubscribed</p>
 									<p class="h2 text-thin">13456</p>
 									<hr>
 									<h4>43%</h4>
@@ -93,7 +93,7 @@
 								  <div class="col-md-3">
 								<div class="panel panel-danger panel-colorful yellowtxt">
 								<div class="panel-body text-center ">
-									<p class="text-uppercase mar-btm text-sm">Opened</p>
+									<p class="text-uppercase mar-btm text-sm">Clicked</p>
 									<p class="h2 text-thin">13456</p>
 									<hr>
 									<h4>43%</h4>
@@ -104,7 +104,7 @@
 								  <div class="col-md-3">
 								<div class="panel panel-danger panel-colorful yellowtxt">
 								<div class="panel-body text-center ">
-									<p class="text-uppercase mar-btm text-sm">Opened</p>
+									<p class="text-uppercase mar-btm text-sm">Bounced</p>
 									<p class="h2 text-thin">13456</p>
 									<hr>
 									<h4>43%</h4>
@@ -115,7 +115,7 @@
 								<div class="col-md-3">
 								<div class="panel panel-danger panel-colorful yellowtxt">
 								<div class="panel-body text-center ">
-									<p class="text-uppercase mar-btm text-sm">Opened</p>
+									<p class="text-uppercase mar-btm text-sm">Unsubscribed</p>
 									<p class="h2 text-thin">13456</p>
 									<hr>
 									<h4>43%</h4>
@@ -143,7 +143,7 @@
   <div class="col-md-3">
         <div class="panel panel-danger panel-colorful pinktxt">
 								<div class="panel-body text-center ">
-									<p class="text-uppercase mar-btm text-sm">Opened</p>
+									<p class="text-uppercase mar-btm text-sm">Clicked</p>
 									<p class="h2 text-thin">13456</p>
 									<hr>
 									<h4>43%</h4>
@@ -153,7 +153,7 @@
   <div class="col-md-3">
         <div class="panel panel-danger panel-colorful pinktxt">
 								<div class="panel-body text-center ">
-									<p class="text-uppercase mar-btm text-sm">Opened</p>
+									<p class="text-uppercase mar-btm text-sm">Bounced</p>
 									<p class="h2 text-thin">13456</p>
 									<hr>
 									<h4>43%</h4>
@@ -163,7 +163,7 @@
   <div class="col-md-3">
         <div class="panel panel-danger panel-colorful pinktxt">
 								<div class="panel-body text-center ">
-									<p class="text-uppercase mar-btm text-sm">Opened</p>
+									<p class="text-uppercase mar-btm text-sm">Unsubscribed</p>
 									<p class="h2 text-thin">13456</p>
 									<hr>
 									<h4>43%</h4>
