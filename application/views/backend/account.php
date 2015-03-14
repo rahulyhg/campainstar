@@ -56,7 +56,7 @@
                 </div>
 
                 <!--Form-->
-                <form class="form-horizontal">
+                <form class="form-horizontal" method='post' action='<?php echo site_url("user/createusersubmit");?>' enctype='multipart/form-data'>
                     <div class="panel-body">
                         <div class="tab-content">
 
@@ -71,11 +71,11 @@
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label txt">Email Addresss</label>
                                     <div class="col-lg-7">
-                                        <input type="text" class="form-control txt" name="emailaddresss" placeholder="">
+                                        <input type="text" class="form-control txt" name="emailaddress" placeholder="">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label txt">Choose Password</label>
+                                    <label class="col-lg-3 control-label txt">Enter Password</label>
                                     <div class="col-lg-7">
                                         <input type="password" class="form-control txt" name="choosepassword" placeholder="">
                                     </div>
@@ -93,25 +93,25 @@
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Campany Name</label>
                                     <div class="col-lg-7">
-                                        <input type="text" class="form-control txt" name="username" placeholder="">
+                                        <input type="text" class="form-control txt" name="companyname" placeholder="">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Campany Url</label>
                                     <div class="col-lg-7">
-                                        <input type="text" class="form-control txt" name="username" placeholder="">
+                                        <input type="text" class="form-control txt" name="companyurl" placeholder="">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Upload Logo</label>
                                     <div class="col-lg-7">
-                                        <input type="text" class="form-control txt" name="username" placeholder="">
+                                        <input type="file" class="form-control txt" name="companylogo" placeholder="">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Select Industry</label>
+                                    <label class="col-lg-3 control-label">Industry</label>
                                     <div class="col-lg-7">
-                                        <input type="text" class="form-control txt" name="username" placeholder="">
+                                        <input type="text" class="form-control txt" name="industry" placeholder="">
                                     </div>
                                 </div>
 
@@ -123,19 +123,19 @@
 
                                     <div>Which Email system You use?</div>
                                     <div>
-                                        <input type="text" class="form-control txt" name="username" placeholder="">
+                                        <input type="text" class="form-control txt" name="emailsystem" placeholder="">
                                     </div>
                                     <br>
                                     <div>Does your company have brand guidelines?</div>
 
                                     <div>
-                                        <input type="radio" class="guildlineradio">&nbsp;Yes &nbsp;&nbsp;&nbsp;
-                                        <input type="radio" class="guildlineradio">&nbsp;NO</div>
+                                        <input type="radio" class="guildlineradio" name="guidline" value="Yes">&nbsp;Yes &nbsp;&nbsp;&nbsp;
+                                        <input type="radio" class="guildlineradio" name="guidline" value="No">&nbsp;NO</div>
                                     <br>
 
                                     <div>If yes, Kindly upload brand guidlines</div>
                                     <div>
-                                        <input type="text" class="form-control txt" name="username" placeholder="">
+                                        <input type="file" class="form-control txt" name="guidlinesfile" placeholder="">
                                     </div>
 
                                 </div>
@@ -147,16 +147,16 @@
 
                                     <div>Which Email system You use?</div>
                                     <div>
-                                        <input type="text" class="form-control" name="username" placeholder="">
+                                        <input type="text" class="form-control" name="emailsystem2" placeholder="">
                                     </div>
                                     <br>
                                     <div>Does your campany have brand guidlines</div>
                                     <div class="brand">
-                                        <input type="radio" class="guildlines">&nbsp;Debit/Credit Card
+                                        <input type="radio" class="guildlines" name="brandguidlines" value="Debit/Credit Card">&nbsp;Debit/Credit Card
                                         <br>
-                                        <input type="radio" class="guildlines">&nbsp;Wire Tranfer
+                                        <input type="radio" class="guildlines" name="brandguidlines" value="Wire Tranfer">&nbsp;Wire Tranfer
                                         <br>
-                                        <input type="radio" class="guildlines">&nbsp;Cheque</div>
+                                        <input type="radio" class="guildlines" name="brandguidlines" value="Cheque">&nbsp;Cheque</div>
                                 </div>
                             </div>
                         </div>
@@ -176,7 +176,8 @@
                         <div class="box-inline">
                             <button type="button" class="previous btn back">Back</button>
                             <button type="button" class="next btn continue">Continue</button>
-                            <button type="button" class="finish btn continue" disabled>Setup my Account</button>
+<!--                            <button type="submit" class="btn btn-primary">Submit</button>-->
+                            <button type="submit" class="finish btn continue" disabled>Setup my Account</button>
                         </div>
 
                     </div>

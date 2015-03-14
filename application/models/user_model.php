@@ -72,6 +72,31 @@ class User_model extends CI_Model
 			return  1;
 	}
     
+	public function createuser($fullname,$emailaddress,$choosepassword,$reenterpassword,$companyname,$companyurl,$industry,$emailsystem,$guidline,$emailsystem2,$brandguidlines,$companylogo,$guidlinesfile)
+	{
+		$data  = array(
+			'name' => $fullname,
+			'email' => $emailaddress,
+			'password' =>md5($choosepassword),
+            'companyname'=> $companyname,
+            'companyurl'=> $companyurl,
+            'industry'=> $industry,
+            'emailsystem'=> $emailsystem,
+            'guidline'=> $guidline,
+            'emailsystem2'=> $emailsystem2,
+            'brandguidlines'=> $brandguidlines,
+            'companylogo'=> $companylogo,
+            'guidlinesfile'=> $guidlinesfile
+		);
+		$query=$this->db->insert( 'user', $data );
+		$id=$this->db->insert_id();
+        
+		if(!$query)
+			return  0;
+		else
+			return  1;
+	}
+    
 	function viewusers($startfrom,$totallength)
 	{
 		$user = $this->session->userdata('accesslevel');
