@@ -19,7 +19,7 @@
     padding-right: 20px;
 }
 .formspac {
-    padding: 15px 10px;
+    padding: 15px 30px;
 }
 .formspac label.control-label {
     margin-bottom: 5px;
@@ -198,7 +198,7 @@ p.Results {
     background: #ed213c;
 }
 .widget-header.bg-primary1 {
-    background-color: #dd705e;
+    background-color: #FFD24D;
 }
 .panel-heading1 {
     background-color: #330066!important;
@@ -269,8 +269,8 @@ small.wz-desc.box-block {
     color: #bbbbbb;
 }
 .no-margin .form-group {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: 0;
+    margin-right: 0;
 }
 .w100 {
     width: 100%;
@@ -305,6 +305,3 @@ a.btn-campaign {
 }
 #page-title,.breadcrumb {padding-left: 0 !important;}
 .padding {padding: 10px;}
-.panel-body {
-  padding: 15px 20px 10px;
-} 

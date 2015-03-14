@@ -1,5 +1,13 @@
 <div class="boxed">
-  							<div class="boxinner">								
+  							<div class="formbox w100">	
+                                      	    
+					           <div id="page-title">
+					<h1 class="page-header text-overflow">Create New List</h1>
+
+				
+<ol class="breadcrumb">
+    <li><a href="#">New List</a></li></ol>
+                                      															
                                        	<form class="form-horizontal bg" action="<?php echo site_url('account/viewmylistuploadsubmit');?>" method="post" enctype= "multipart/form-data">
                                         <div class="formspac">
                                          <div class="form-group">
@@ -16,10 +24,10 @@
 				</div>
                </div>
 										<!--Footer button-->
-										<div  class="button">
+										<div  class="button padding">
                                  
-                                             <a href="<?php echo site_url('account/viewpost'); ?>" class="back">Back</a>
-                                              <button type="submit"  class="continue">Continue</button>
+                                             <a href="<?php echo site_url('account/viewpost'); ?>" class="btn btn-default">Back</a>
+                                              <button type="submit"  class="btn btn-primary">Continue</button>
 <!--                                         <a href="<?php echo site_url('account/campany'); ?>" class="continue">Continue</a>-->
                                             
 										</div>

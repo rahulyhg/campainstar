@@ -5,13 +5,13 @@
 
     <!--CONTENT CONTAINER-->
     <!--===================================================-->
-    <div id="content-container">
+    <div class="formbox w100" >
 
         <!--Page Title-->
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <div id="page-title">
             <h1 class="page-header text-overflow">Create Campaign</h1>
-
+        </div>
             <!--Searchbox-->
             <!--<div class="searchbox">
 						<div class="input-group custom-search-form">
@@ -26,7 +26,7 @@
             <!--End page title-->
             <ol class="breadcrumb">
                 <li><a href="#">Home</a>
-                </li>
+                </li></ol>
                 <!--Page content-->
                 <!--===================================================-->
                 <div id="page-content">

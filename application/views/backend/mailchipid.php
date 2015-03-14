@@ -1,5 +1,12 @@
 	<div class="boxed">
-  							<div class="boxinner">
+  							<div class="formbox w100">
+                                        <div id="page-title">
+					<h1 class="page-header text-overflow">Mail Chimp</h1>
+
+				
+<ol class="breadcrumb">
+    <li><a href="#">Mail Chimp</a></li></ol>
+                                       
                                        
                                        <form class="form-horizontal bg" action="<?php echo site_url('account/mailchipidsubmit');?>" method="post">
                                         <div class="formspac">
@@ -13,14 +20,14 @@
 															
                                              </div>
                                             </div>
-                                            	<div  class="button">
+                                           </div>  
+                                            	<div  class="button padding">
                                  
-                                             <a href="<?php echo site_url('account/viewpost'); ?>" class="back">Back</a>
-                                              <button type="submit"  class="continue">Continue</button>
+                                             <a href="<?php echo site_url('account/viewpost'); ?>" class="btn btn-default">Back</a>
+                                              <button type="submit"  class="btn btn-primary">Continue</button>
 <!--                                         <a href="<?php echo site_url('account/campany'); ?>" class="continue">Continue</a>-->
                                             
 										</div>
-                                           </div>  
                                 </form> 
         </div>
 </div>                                  
