@@ -11,7 +11,7 @@
         </div>
         <ol class="breadcrumb">
             <li><a href="#">Home</a>
-            </li>
+            </li></ol>
             <div id="page-content">
 
 

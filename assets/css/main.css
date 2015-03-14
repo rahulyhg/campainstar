@@ -303,4 +303,5 @@ a.btn-campaign {
     font-weight: 600 !important;
     display: inline-block !important;
 }
-.breadcrumb {padding: 0 !important;}
+#page-title,.breadcrumb {padding-left: 0 !important;}
+.padding {padding: 10px;}
