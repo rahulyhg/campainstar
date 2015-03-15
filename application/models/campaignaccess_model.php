@@ -192,7 +192,7 @@ WHERE `campaign_campaignresult`. `campaign`='$id'")->row();
             $this->db->where('id',$id);
             $query=$this->db->update( 'campaign_campaigngroup', $data );
             
-            $querycheck=$this->db->query("INSERT INTO `wohligco_campaign`.`campaign_campaigngroup` (`id`, `campaign`, `Timestamp`, `order`, `status`, `group`, `image`, `htmldata`) VALUES (NULL, '$campaign', CURRENT_TIMESTAMP, '', '1', '$id', '', '');");
+            $querycheck=$this->db->query("INSERT INTO `campaign_campaigngroup` (`id`, `campaign`, `Timestamp`, `order`, `status`, `group`, `image`, `htmldata`) VALUES (NULL, '$campaign', CURRENT_TIMESTAMP, '', '1', '$id', '', '');");
             $length=sizeof($querycheck);
     //        echo $length;
             if($length==2)
