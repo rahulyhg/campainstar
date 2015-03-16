@@ -6,9 +6,9 @@
         <ol class="breadcrumb">
             <li><a href="#">PREVIEW AND APPROVE</a>
             </li>
-            <li><a href="">RED BULL NEWSLETTER</a></li>
+            <!-- <li><a href="">RED BULL NEWSLETTER</a></li> -->
         </ol>
-        
+
         <div class="row">
            <?php
             foreach($table as $row)
@@ -35,7 +35,7 @@
                     <!--Panel body-->
                     <div class="panel-body">
                         <div class="tab-content">
-                           <?php 
+                           <?php
                             $url2=$this->config->item('base_url2');
                             ?>
                             <div class="tab-pane fade in active text-center" id="demo-tabs-box-1">

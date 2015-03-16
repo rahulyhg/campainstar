@@ -259,15 +259,17 @@ li.pad-ver {
 }
 .bg_yellow {
     background-color: #ffd24d;
+    color: #22223c;
 }
 .hd_bgcolor {
-    background-color: #1C1C5A;
+    background-color: #22222c;
 }
 .hd_bgcolor a {
-    color: #ffd24d!important;
+    color: #ffd24d !important;
 }
 small.wz-desc.box-block {
     opacity: 1;
+    color: white;
 }
 .grey {
     color: #bbbbbb;
@@ -309,3 +311,11 @@ a.btn-campaign {
 }
 #page-title,.breadcrumb {padding-left: 0 !important;}
 .padding {padding: 10px;}
+span.bg_yellow + small.wz-desc {
+    color: #FFFFFF;
+    margin-top: 5px;
+}
+
+.active small.wz-desc.box-block {
+    color: #ffd24d;
+}

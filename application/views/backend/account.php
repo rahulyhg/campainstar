@@ -153,12 +153,12 @@
                             <div id="demo-step-tab4" class="tab-pane mar-btm">
                                 <div class="formspac divplus">
 
-                                    <div>Which Email system You use?</div>
+                                    <div>Which campaign package would you like to purchase?</div>
                                     <div>
                                         <input type="text" class="form-control" name="emailsystem2" placeholder="">
                                     </div>
                                     <br>
-                                    <div>Does your campany have brand guidlines</div>
+                                    <div>How would you prefer to make payment?</div>
                                     <div class="brand">
                                         <input type="radio" class="guildlines" name="brandguidlines" value="Debit/Credit Card">&nbsp;Debit/Credit Card
                                         <br>
